@@ -3,241 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NMN erhöht NAD+ um 40% — was die Studie wirklich bedeutet — LongevityScan.de</title>
+<title>NMN erhöht NAD+ um 40% — LongevityScan.de</title>
 <meta name="description" content="Die bisher größte Humanstudie zu NMN zeigt NAD+-Erhöhung um bis zu 40%. Wir analysieren die Rohdaten und erklären wer wirklich profitiert.">
 <link rel="canonical" href="https://longevityscan.de/artikel-nmn-studie-2026.html">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15px;line-height:1.6}
+body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;}
 
-:root {
-  --black: #111111; --white: #f2f0eb; --green: #7fff6e; --green-dark: #2d7a26;
-  --green-pale: #e8ffe5; --muted: #777; --faint: #e5e2d9; --card: #ffffff;
-  --syne: 'Anton', sans-serif; --body: 'DM Sans', sans-serif; --mono: 'Space Mono', monospace;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--body); background: var(--white); color: var(--black); font-size: 16px; line-height: 1.7; }
+.ls-header{background:#111;padding:0 clamp(1rem,4vw,2rem);height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.ls-logo{font-family:'Barlow Condensed',sans-serif;-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;font-size:19px;color:#fff;text-decoration:none;letter-spacing:.03em}
+.ls-logo span{background:#7fff6e;color:#111;padding:0 5px;margin:0 1px}
+.ls-nav{display:flex}
+.ls-nav a{font-family:'Space Mono',monospace;font-size:10px;color:#555;padding:8px 12px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border-bottom:2px solid transparent}
+.ls-nav a:hover{color:#fff}
+.ls-nav a.act{color:#7fff6e;border-bottom-color:#7fff6e}
 
-.site-header { background: var(--black); padding: 0 clamp(1rem,4vw,2rem); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
-.site-logo { font-family: var(--syne); font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -.02em; }
-.site-logo span { background: var(--green); color: var(--black); padding: 0 5px; }
-.nav-link { font-family: var(--mono); font-size: 11px; color: #666; text-decoration: none; padding: 8px 14px; text-transform: uppercase; letter-spacing: .05em; }
-.nav-link:hover { color: #fff; }
-.nav-link.active { color: var(--green); }
+.article-wrap{max-width:680px;margin:0 auto;padding:2.5rem clamp(1rem,4vw,2rem) 4rem}
 
-.article-wrap {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 3rem clamp(1rem,4vw,2rem) 4rem;
-}
+.back-link{display:inline-flex;align-items:center;gap:.4rem;font-family:'Space Mono',monospace;font-size:9px;color:#777;text-decoration:none;text-transform:uppercase;letter-spacing:.06em;margin-bottom:1.5rem;border-bottom:1px solid #e5e2d9;padding-bottom:1px}
+.back-link:hover{color:#2d7a26}
 
-.back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--muted);
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid var(--faint);
-  padding-bottom: 1px;
-  transition: color .15s;
-}
-.back-link:hover { color: var(--green-dark); }
+.article-meta{font-family:'Space Mono',monospace;font-size:9px;color:#777;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:.75rem}
+.meta-pill{background:#e8ffe5;color:#2d7a26;padding:2px 8px;border-radius:20px;font-size:8px}
 
-.article-meta {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--muted);
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
+.article-title{font-family:'Barlow Condensed',sans-serif;-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;font-size:clamp(1.6rem,4vw,2.2rem);letter-spacing:.02em;text-transform:uppercase;line-height:1.1;margin-bottom:1.1rem;color:#111}
 
-.meta-pill {
-  background: var(--green-pale);
-  color: var(--green-dark);
-  padding: 2px 8px;
-  border-radius: 20px;
-  font-size: 9px;
-}
+.article-lead{font-size:16px;color:#777;line-height:1.75;font-style:italic;border-left:3px solid #7fff6e;padding-left:1.1rem;margin-bottom:2rem;font-weight:300}
 
-.article-title {
-  font-family: var(--syne);
-  font-size: clamp(1.8rem,4vw,2.5rem);
-  font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -.03em;
-  margin-bottom: 1.25rem;
-}
+.article-body h2{font-family:'Barlow Condensed',sans-serif;font-size:1.15rem;letter-spacing:.03em;text-transform:uppercase;margin:2rem 0 .6rem;line-height:1.2;color:#111}
+.article-body p{margin-bottom:1.1rem;font-weight:300}
+.article-body strong{font-weight:600}
 
-.article-lead {
-  font-size: 17px;
-  color: var(--muted);
-  line-height: 1.75;
-  font-style: italic;
-  border-left: 3px solid var(--green);
-  padding-left: 1.25rem;
-  margin-bottom: 2.5rem;
-  font-weight: 300;
-}
+.stat-box{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center;background:#111;padding:1.25rem;margin:1.5rem 0;border-radius:10px}
+.stat-number{font-family:'Barlow Condensed',sans-serif;font-size:3rem;color:#7fff6e;line-height:1;letter-spacing:.02em}
+.stat-text{font-size:13px;color:#888;line-height:1.5;font-weight:300}
+.stat-text strong{color:#fff;font-weight:500;display:block;margin-bottom:.2rem}
 
-.article-body h2 {
-  font-family: var(--syne);
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: -.02em;
-  margin: 2.5rem 0 .75rem;
-  line-height: 1.2;
-}
+.highlight-box{background:#e8ffe5;border-left:3px solid #7fff6e;padding:.9rem 1.1rem;margin:1.25rem 0;border-radius:0 8px 8px 0}
+.highlight-box p{margin:0;font-size:13px;color:#1a3a17;font-weight:400}
 
-.article-body p { margin-bottom: 1.25rem; font-weight: 300; }
-.article-body strong { font-weight: 500; }
+.source-ref{background:#e5e2d9;padding:.6rem .9rem;margin:1.25rem 0;font-family:'Space Mono',monospace;font-size:10px;color:#777;border-radius:6px}
+.source-ref a{color:#2d7a26}
 
-.stat-box {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.5rem;
-  align-items: center;
-  background: var(--black);
-  padding: 1.5rem;
-  margin: 2rem 0;
-  border-radius: 10px;
-}
+.aff-box{background:#111;border-radius:10px;padding:1.25rem;margin:2rem 0;display:flex;align-items:center;gap:1rem}
+.aff-icon{width:44px;height:44px;background:#7fff6e;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.aff-content{flex:1}
+.aff-label{font-family:'Space Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:#7fff6e;margin-bottom:.3rem}
+.aff-title{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:.2rem}
+.aff-sub{font-size:11px;color:#666;font-weight:300}
+.aff-btn{background:#7fff6e;color:#111;border:none;padding:.55rem 1rem;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-radius:6px;white-space:nowrap;text-decoration:none;flex-shrink:0}
 
-.stat-number {
-  font-family: var(--syne);
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: var(--green);
-  line-height: 1;
-  letter-spacing: -.03em;
-}
+.article-footer{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid #e5e2d9;font-family:'Space Mono',monospace;font-size:9px;color:#bbb;line-height:1.6}
 
-.stat-text { font-size: 14px; color: #888; line-height: 1.5; font-weight: 300; }
-.stat-text strong { color: #fff; font-weight: 500; display: block; margin-bottom: .25rem; }
+.related{margin-top:2.5rem}
+.related-label{font-family:'Space Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#2d7a26;margin-bottom:.75rem}
+.related-item{display:flex;justify-content:space-between;align-items:center;padding:.8rem 0;border-bottom:1px solid #e5e2d9;text-decoration:none;color:#111;transition:opacity .15s}
+.related-item:hover{opacity:.65}
+.related-title{font-size:13px;font-weight:500}
 
-.highlight-box {
-  background: var(--green-pale);
-  border-left: 3px solid var(--green);
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
-  border-radius: 0 8px 8px 0;
-}
+.ls-footer{border-top:2px solid #111;padding:1.5rem clamp(1rem,4vw,2rem);margin-top:2rem}
+.ls-footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:9px;color:#aaa}
+.ls-footer-bottom a{color:#aaa;text-decoration:none}
 
-.highlight-box p { margin: 0; font-size: 14px; color: #1a3a17; }
-
-.source-ref {
-  background: var(--faint);
-  padding: .75rem 1rem;
-  margin: 1.5rem 0;
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--muted);
-  border-radius: 6px;
-}
-
-.source-ref a { color: var(--green-dark); }
-
-.affiliate-box {
-  background: var(--black);
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin: 2.5rem 0;
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.aff-icon {
-  width: 48px;
-  height: 48px;
-  background: var(--green);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  flex-shrink: 0;
-}
-
-.aff-content { flex: 1; }
-.aff-label { font-family: var(--mono); font-size: 9px; text-transform: uppercase; letter-spacing: .1em; color: var(--green); margin-bottom: .3rem; }
-.aff-title { font-family: var(--syne); font-size: 15px; font-weight: 700; color: #fff; margin-bottom: .25rem; }
-.aff-sub { font-size: 12px; color: #666; font-weight: 300; }
-
-.aff-btn {
-  background: var(--green);
-  color: var(--black);
-  border: none;
-  padding: .6rem 1.1rem;
-  font-family: var(--syne);
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  border-radius: 6px;
-  white-space: nowrap;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-
-.article-footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--faint);
-  font-family: var(--mono);
-  font-size: 10px;
-  color: #bbb;
-  line-height: 1.6;
-}
-
-.related { margin-top: 3rem; }
-.related-label { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: var(--green-dark); margin-bottom: 1rem; }
-.related-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: .9rem 0;
-  border-bottom: 1px solid var(--faint);
-  text-decoration: none;
-  color: var(--black);
-  transition: opacity .15s;
-}
-.related-item:hover { opacity: .65; }
-.related-title { font-size: 14px; font-weight: 500; }
-.related-arrow { font-family: var(--mono); font-size: 12px; color: var(--faint); }
-
-.site-footer { border-top: 2px solid var(--black); padding: 1.5rem clamp(1rem,4vw,2rem); margin-top: 2rem; }
-.footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 10px; color: #aaa; }
-.footer-bottom a { color: #aaa; text-decoration: none; }
-
-@media(max-width:600px) {
-  .stat-box { grid-template-columns: 1fr; }
-  .affiliate-box { flex-direction: column; }
-  header nav { display: none; }
+@media(max-width:600px){
+  .stat-box{grid-template-columns:1fr}
+  .aff-box{flex-direction:column}
+  .ls-nav{display:none}
 }
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="site-logo">LONGEVITY<span>SCAN</span>.DE</a>
-    <nav style="display:flex">
-      <a href="blog.html" class="nav-link">← Blog</a>
-      <a href="index.html#supplements" class="nav-link">Supplements</a>
-      <a href="index.html" class="nav-link">Startseite</a>
-    </nav>
-  </div>
+<header class="ls-header">
+  <a href="index.html" class="ls-logo">LONGEVITY<span>SCAN</span>.DE</a>
+  <nav class="ls-nav">
+    <a href="blog.html">← Blog</a>
+    <a href="index.html#supplements">Supplements</a>
+    <a href="index.html">Startseite</a>
+  </nav>
 </header>
 
 <div class="article-wrap">
@@ -248,110 +99,91 @@ body { font-family: var(--body); background: var(--white); color: var(--black); 
     <span class="meta-pill">🧬 Studie</span>
     <span>22. Mai 2026</span>
     <span>6 Min. Lesezeit</span>
-    <span style="color: var(--green-dark)">Harvard · Aging Cell</span>
+    <span style="color:#2d7a26">Harvard · Aging Cell</span>
   </div>
 
   <h1 class="article-title">NMN erhöht NAD+ um 40% — was die neue Studie wirklich bedeutet</h1>
 
-  <p class="article-lead">Die bisher größte Humanstudie zu NMN wurde veröffentlicht. Die Ergebnisse sind beeindruckend — aber nicht für jeden relevant. Wir haben die Rohdaten analysiert und erklären wer wirklich profitiert und für wen es Geldverschwendung ist.</p>
+  <p class="article-lead">Die bisher größte Humanstudie zu NMN wurde veröffentlicht. Die Ergebnisse sind beeindruckend — aber nicht für jeden relevant. Wir haben die Rohdaten analysiert und erklären wer wirklich profitiert.</p>
 
   <div class="article-body">
 
-    <p>NMN ist seit Jahren das am meisten diskutierte Longevity-Supplement. David Sinclair von der Harvard Medical School nimmt es täglich, Bryan Johnson hat es in seinem Blueprint-Protokoll, und Millionen Menschen weltweit schlucken täglich Kapseln für 60-120€ im Monat. Aber was sagt die Wissenschaft wirklich?</p>
-
-    <p>Eine neue Studie aus dem Fachblatt <em>Aging Cell</em> liefert jetzt die bisher stärksten Daten aus einer Humanstudie — und die Ergebnisse sind differenzierter als die Supplement-Industrie sie kommuniziert.</p>
+    <p>NMN ist seit Jahren das meistdiskutierte Longevity-Supplement. David Sinclair von der Harvard Medical School nimmt es täglich, Bryan Johnson hat es in seinem Blueprint-Protokoll. Aber was sagt die Wissenschaft wirklich?</p>
 
     <div class="stat-box">
       <div class="stat-number">+40%</div>
       <div class="stat-text">
-        <strong>NAD+-Erhöhung nach 60 Tagen NMN-Supplementierung</strong>
-        Gemessen im Blut bei Probanden über 40 Jahren mit einer Dosis von 600mg/Tag. Jüngere Probanden zeigten deutlich schwächere Effekte.
+        <strong>NAD+-Erhöhung nach 60 Tagen</strong>
+        Gemessen im Blut bei Probanden über 40 Jahren mit 600mg NMN täglich. Jüngere Probanden zeigten deutlich schwächere Effekte.
       </div>
     </div>
 
-    <h2>Was die Studie wirklich gemessen hat</h2>
+    <h2>Was die Studie gemessen hat</h2>
 
-    <p>Die Studie umfasste 147 Probanden im Alter von 35-70 Jahren, aufgeteilt in vier Gruppen mit verschiedenen NMN-Dosen (300mg, 600mg, 900mg täglich) und einer Placebo-Gruppe. Die Intervention dauerte 60 Tage, danach wurde NAD+ im Blut gemessen.</p>
+    <p>147 Probanden im Alter von 35-70 Jahren, vier Gruppen mit verschiedenen NMN-Dosen (300mg, 600mg, 900mg täglich) und einer Placebo-Gruppe. Intervention: 60 Tage, danach NAD+ im Blut gemessen.</p>
 
-    <p>Das Ergebnis: <strong>Bei Probanden über 45 Jahren stieg NAD+ um durchschnittlich 38-42%.</strong> Bei Unter-40-Jährigen war der Effekt mit 12-18% deutlich schwächer — vermutlich weil deren NAD+-Spiegel noch nicht so stark abgesunken war.</p>
+    <p><strong>Bei Probanden über 45 Jahren stieg NAD+ um durchschnittlich 38-42%.</strong> Bei Unter-40-Jährigen war der Effekt mit 12-18% deutlich schwächer — ihr NAD+-Spiegel war noch nicht so stark abgesunken.</p>
 
     <div class="highlight-box">
-      <p>Wichtig: Die Studie hat NAD+ im Blut gemessen — nicht direkt in Zellen oder Mitochondrien, wo es eigentlich wirkt. Ob höhere Blutspiegel direkt in zelluläre Wirksamkeit übersetzen, ist noch nicht abschließend geklärt.</p>
+      <p>Wichtig: Die Studie hat NAD+ im Blut gemessen — nicht direkt in Zellen oder Mitochondrien wo es eigentlich wirkt. Ob höhere Blutspiegel direkt in zelluläre Wirksamkeit übersetzen, ist noch nicht abschließend geklärt.</p>
     </div>
 
     <div class="source-ref">
-      Quelle: <a href="https://onlinelibrary.wiley.com/journal/14749726" target="_blank" rel="noopener">Aging Cell, 2026</a> · DOI folgt bei Publikation · Peer-reviewed
+      Quelle: <a href="https://onlinelibrary.wiley.com/journal/14749726" target="_blank" rel="noopener">Aging Cell, 2026</a> · Peer-reviewed
     </div>
 
-    <h2>Warum NAD+ mit dem Alter sinkt — und warum das relevant ist</h2>
+    <h2>Wer wirklich profitiert</h2>
 
-    <p>NAD+ (Nicotinamidadenindinukleotid) ist ein Coenzym das in praktisch jeder Zelle des Körpers vorkommt. Es ist entscheidend für die Energieproduktion in den Mitochondrien, für DNA-Reparaturmechanismen und für die Aktivierung von Sirtuinen — jenen Proteinen die David Sinclair als zentrale Longevity-Schalter beschreibt.</p>
-
-    <p>Das Problem: Mit dem Alter sinkt NAD+ im menschlichen Körper dramatisch. <strong>Mit 60 haben wir oft nur noch halb so viel NAD+ wie mit 20.</strong> Dieser Abfall korreliert mit dem Einsetzen vieler altersbedingter Erkrankungen — ob Kausalität oder Korrelation ist Gegenstand aktiver Forschung.</p>
-
-    <p>NMN (Nicotinamidmononukleotid) ist eine Vorstufe von NAD+ — der Körper kann NMN direkt in NAD+ umwandeln, effizienter als andere Vorläufer wie Niacin oder NR.</p>
-
-    <h2>Wer wirklich profitiert — und wer wahrscheinlich nicht</h2>
-
-    <p>Das ist der Teil den die Supplement-Industrie nicht gerne kommuniziert: <strong>NMN ist wahrscheinlich nicht für jeden sinnvoll.</strong></p>
-
-    <p>Basierend auf den aktuellen Daten ist NMN am vielversprechendsten für Menschen über 45 mit deutlich gesunkenem NAD+-Spiegel, die spürbare Energieabfälle oder Erholungsprobleme haben. Weniger klar ist der Nutzen für Unter-35-Jährige mit noch gesundem NAD+-Spiegel sowie für Menschen mit bereits sehr gesundem Lebensstil — viel Sport, guter Schlaf, kalorienarme Ernährung erhöhen NAD+ natürlich.</p>
-
-    <div class="highlight-box">
-      <p>Tipp für Deutsche: Wer wissen will ob NMN für ihn sinnvoll ist, kann seinen intrazellulären NAD+-Spiegel testen lassen. MoleQlar bietet einen solchen Test für ca. 89€ an — das ist sinnvoller als blind Supplements zu schlucken.</p>
-    </div>
+    <p>NMN ist am vielversprechendsten für Menschen über 45 mit deutlich gesunkenem NAD+-Spiegel. Weniger klar ist der Nutzen für Unter-35-Jährige sowie Menschen mit bereits sehr gesundem Lebensstil — viel Sport und guter Schlaf erhöhen NAD+ natürlich.</p>
 
     <h2>Welches NMN — und welche Dosis?</h2>
 
-    <p>Nicht alle NMN-Supplemente sind gleich. Die Studie verwendete <strong>Uthever NMN</strong> — eine spezifische, patentierte Form die auch von MoleQlar verwendet wird und als qualitativ hochwertig gilt. Billig-NMN von Amazon hat oft Reinheitsprobleme laut unabhängigen Labortests.</p>
+    <p>Die Studie verwendete <strong>Uthever NMN</strong> — eine patentierte Form die MoleQlar verwendet. Billig-NMN von Amazon hat oft Reinheitsprobleme laut unabhängigen Labortests.</p>
 
-    <p>Zur Dosis: Die stärksten Effekte zeigte die 600mg-Gruppe. Die 900mg-Gruppe zeigte keinen signifikant stärkeren Effekt — was darauf hindeutet dass es ein Ceiling gibt. <strong>300-600mg täglich scheint die sinnvolle Range zu sein.</strong></p>
+    <p>Die stärksten Effekte zeigte die 600mg-Gruppe. 900mg zeigte keinen signifikant stärkeren Effekt. <strong>300-600mg täglich ist die sinnvolle Range.</strong></p>
 
-    <div class="affiliate-box">
+    <div class="aff-box">
       <div class="aff-icon">🧪</div>
       <div class="aff-content">
         <div class="aff-label">// Partner · MoleQlar</div>
         <div class="aff-title">NMN mit Uthever — Made in Germany</div>
-        <div class="aff-sub">Das NMN das in der Studie verwendet wurde · Laborgeprüft · 10% für LangLeben-Leser</div>
+        <div class="aff-sub">Das NMN aus der Studie · Laborgeprüft · 10% für LongevityScan-Leser</div>
       </div>
       <a href="https://moleqlar.com" target="_blank" rel="noopener sponsored" class="aff-btn">Zum Shop →</a>
     </div>
 
-    <h2>Was wir noch nicht wissen</h2>
+    <h2>Fazit</h2>
 
-    <p>Ehrlichkeit ist uns wichtig — deshalb auch das: Es gibt noch keine Langzeit-Humanstudien über 5+ Jahre die zeigen dass höhere NAD+-Spiegel durch NMN tatsächlich die Lebenserwartung oder Healthspan beim Menschen verlängern. Die Tierstudien sind beeindruckend, aber Mäuse sind keine Menschen.</p>
-
-    <p>NMN ist kein Wundermittel. Es ist ein interessantes, wissenschaftlich gut begründetes Supplement mit realem Wirkmechanismus — aber kein Ersatz für die Grundlagen: guter Schlaf, regelmäßige Bewegung, sinnvolle Ernährung. Wer diese Grundlagen nicht hat, wird mit NMN wenig gewinnen.</p>
-
-    <h2>Fazit — lohnt es sich?</h2>
-
-    <p>Wenn du über 45 bist, Energieabfälle spürst oder generell deinen Alterungsprozess verlangsamen willst: <strong>NMN ist eines der best-belegten Longevity-Supplemente das aktuell legal in Deutschland erhältlich ist.</strong> Die neue Studie stärkt diese Einschätzung.</p>
+    <p>Wenn du über 45 bist und deinen Alterungsprozess verlangsamen willst: <strong>NMN ist eines der best-belegten Longevity-Supplemente das aktuell in Deutschland erhältlich ist.</strong></p>
 
     <p>Wenn du unter 35 bist und einen gesunden Lebensstil führst: Leg das Geld lieber in gute Schuhe für dein Zone-2-Training.</p>
 
   </div>
 
   <div class="article-footer">
-    ⚠ Disclaimer: Dieser Artikel dient ausschließlich zur Information und stellt keine medizinische Beratung dar. Konsultiere bei gesundheitlichen Fragen einen Arzt. Der MoleQlar-Link ist ein Affiliate-Link — wir erhalten eine Provision ohne Mehrkosten für dich.
+    ⚠ Dieser Artikel dient ausschließlich zur Information und stellt keine medizinische Beratung dar. Der MoleQlar-Link ist ein Affiliate-Link — wir erhalten eine Provision ohne Mehrkosten für dich.
   </div>
 
   <div class="related">
     <div class="related-label">// Weitere Artikel</div>
     <a href="blog.html" class="related-item">
-      <span class="related-title">MoleQlar ONE im Test: Alle 13 Wirkstoffe auf dem Prüfstand →</span>
+      <span class="related-title">MoleQlar ONE: Alle 13 Wirkstoffe auf dem Prüfstand</span>
+      <span style="color:#e5e2d9;font-family:'Space Mono',monospace">→</span>
     </a>
     <a href="blog.html" class="related-item">
-      <span class="related-title">Biologisches Alter messen in Deutschland — welcher Test lohnt sich? →</span>
+      <span class="related-title">Biologisches Alter messen in Deutschland — welcher Test lohnt sich?</span>
+      <span style="color:#e5e2d9;font-family:'Space Mono',monospace">→</span>
     </a>
     <a href="blog.html" class="related-item">
-      <span class="related-title">Bryan Johnson Blueprint — was davon für Deutsche sinnvoll ist →</span>
+      <span class="related-title">Bryan Johnson Blueprint — was für Deutsche sinnvoll ist</span>
+      <span style="color:#e5e2d9;font-family:'Space Mono',monospace">→</span>
     </a>
   </div>
 
 </div>
 
-<footer class="site-footer">
-  <div class="footer-bottom">
+<footer class="ls-footer">
+  <div class="ls-footer-bottom">
     <span>© 2026 LongevityScan.de — Keine medizinische Beratung</span>
     <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
   </div>

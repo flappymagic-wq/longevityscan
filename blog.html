@@ -3,128 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — LongevityScan.de</title>
+<title>Blog & Analysen — LongevityScan.de</title>
 <meta name="description" content="Alle Longevity-Artikel auf Deutsch — Studien, Supplement-Tests, Protokolle und Biohacking-Guides.">
 <link rel="canonical" href="https://longevityscan.de/blog.html">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
 
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15px;line-height:1.6}
+body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;}
 
-:root {
-  --black: #111111; --white: #f2f0eb; --green: #7fff6e; --green-dark: #2d7a26;
-  --green-pale: #e8ffe5; --muted: #777; --faint: #e5e2d9; --card: #ffffff;
-  --syne: 'Anton', sans-serif; --body: 'DM Sans', sans-serif; --mono: 'Space Mono', monospace;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: var(--body); background: var(--white); color: var(--black); font-size: 15px; line-height: 1.6; }
+.ls-header{background:#111;padding:0 clamp(1rem,4vw,2rem);height:56px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.ls-logo{font-family:'Barlow Condensed',sans-serif;-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;font-size:19px;color:#fff;text-decoration:none;letter-spacing:.03em}
+.ls-logo span{background:#7fff6e;color:#111;padding:0 5px;margin:0 1px}
+.ls-nav{display:flex}
+.ls-nav a{font-family:'Space Mono',monospace;font-size:10px;color:#555;padding:8px 12px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border-bottom:2px solid transparent;transition:color .15s}
+.ls-nav a:hover{color:#fff}
+.ls-nav a.act{color:#7fff6e;border-bottom-color:#7fff6e}
 
-.site-header { background: var(--black); padding: 0 clamp(1rem,4vw,2rem); }
-.header-inner { display: flex; align-items: center; justify-content: space-between; height: 56px; }
-.site-logo { font-family: var(--syne); font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; letter-spacing: -.02em; }
-.site-logo span { background: var(--green); color: var(--black); padding: 0 5px; }
-.site-nav { display: flex; }
-.nav-link { font-family: var(--mono); font-size: 11px; color: #666; text-decoration: none; padding: 8px 14px; text-transform: uppercase; letter-spacing: .05em; transition: color .15s; border-bottom: 2px solid transparent; }
-.nav-link:hover { color: #fff; }
-.nav-link.active { color: var(--green); border-bottom-color: var(--green); }
+.page-wrap{max-width:860px;margin:0 auto;padding:2.5rem clamp(1rem,4vw,2rem) 4rem}
 
-.page-wrap { max-width: 860px; margin: 0 auto; padding: 3rem clamp(1rem,4vw,2rem) 4rem; }
+.page-kicker{font-family:'Space Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:#2d7a26;margin-bottom:.75rem}
+.page-title{font-family:'Barlow Condensed',sans-serif;-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;font-size:2rem;letter-spacing:.03em;text-transform:uppercase;margin-bottom:.4rem;color:#111}
+.page-sub{font-size:13px;color:#777;font-weight:300;margin-bottom:2rem}
 
-.page-header { margin-bottom: 3rem; }
-.page-kicker { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: .12em; color: var(--green-dark); margin-bottom: .75rem; }
-.page-title { font-family: var(--syne); font-size: clamp(2rem,5vw,3rem); font-weight: 800; letter-spacing: -.03em; margin-bottom: .5rem; }
-.page-sub { font-size: 14px; color: var(--muted); font-weight: 300; }
+.filter-row{display:flex;gap:.4rem;margin-bottom:2rem;flex-wrap:wrap}
+.filter-btn{font-family:'Space Mono',monospace;font-size:9px;padding:5px 12px;border:1px solid #e5e2d9;background:#fff;color:#777;border-radius:20px;cursor:pointer;text-transform:uppercase;letter-spacing:.06em;transition:all .15s}
+.filter-btn:hover,.filter-btn.active{background:#111;color:#7fff6e;border-color:#111}
 
-.filter-row { display: flex; gap: .5rem; margin-bottom: 2rem; flex-wrap: wrap; }
-.filter-btn { font-family: var(--mono); font-size: 10px; padding: 5px 14px; border: 1px solid var(--faint); background: var(--card); color: var(--muted); border-radius: 20px; cursor: pointer; text-transform: uppercase; letter-spacing: .06em; transition: all .15s; }
-.filter-btn:hover, .filter-btn.active { background: var(--black); color: var(--green); border-color: var(--black); }
+.articles{display:flex;flex-direction:column;gap:0}
 
-.articles { display: flex; flex-direction: column; gap: 0; }
+.article-item{display:grid;grid-template-columns:1fr auto;gap:1.5rem;padding:1.5rem 0;border-bottom:1px solid #e5e2d9;text-decoration:none;color:inherit;align-items:start;transition:opacity .15s}
+.article-item:first-child{border-top:1px solid #e5e2d9}
+.article-item:hover{opacity:.7}
 
-.article-item {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 1.5rem;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--faint);
-  text-decoration: none;
-  color: inherit;
-  align-items: start;
-  transition: opacity .15s;
-}
-.article-item:first-child { border-top: 1px solid var(--faint); }
-.article-item:hover { opacity: .75; }
+.article-item.featured-item{background:#111;color:#fff;padding:1.5rem;margin-bottom:1.5rem;border:none;grid-template-columns:1fr;border-radius:10px}
 
-.article-item.featured-item {
-  background: var(--black);
-  color: #fff;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  border: none;
-  grid-template-columns: 1fr;
-  border-radius: 10px;
-}
+.item-pill{display:inline-block;font-family:'Space Mono',monospace;font-size:8px;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.06em;font-weight:500;margin-bottom:.5rem}
+.pill-g{background:#e8ffe5;color:#2d7a26}
+.pill-o{background:#fff3e5;color:#a85a00}
+.pill-b{background:#e5f0ff;color:#1a4fa8}
+.pill-p{background:#ffe5f0;color:#a8005a}
+.featured-item .item-pill{background:rgba(127,255,110,.15);color:#7fff6e}
 
-.item-pill { display: inline-block; font-family: var(--mono); font-size: 9px; padding: 2px 8px; border-radius: 20px; text-transform: uppercase; letter-spacing: .06em; font-weight: 500; margin-bottom: .5rem; }
-.pill-green { background: var(--green-pale); color: var(--green-dark); }
-.pill-orange { background: #fff3e5; color: #a85a00; }
-.pill-blue { background: #e5f0ff; color: #1a4fa8; }
-.pill-pink { background: #ffe5f0; color: #a8005a; }
-.featured-item .item-pill { background: rgba(127,255,110,.15); color: var(--green); }
+.item-meta{font-family:'Space Mono',monospace;font-size:9px;color:#bbb;margin-bottom:.4rem;display:flex;gap:1rem}
+.featured-item .item-meta{color:#555}
 
-.item-meta { font-family: var(--mono); font-size: 10px; color: #bbb; margin-bottom: .5rem; display: flex; gap: 1rem; }
-.featured-item .item-meta { color: #555; }
+.item-title{font-family:'Barlow Condensed',sans-serif;-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale;
+text-rendering:optimizeLegibility;font-size:1.1rem;letter-spacing:.02em;text-transform:uppercase;line-height:1.2;margin-bottom:.4rem;color:#111}
+.featured-item .item-title{font-size:1.4rem;color:#fff;margin-bottom:.6rem}
 
-.item-title { font-family: var(--syne); font-size: 1.1rem; font-weight: 700; line-height: 1.25; letter-spacing: -.01em; margin-bottom: .4rem; }
-.featured-item .item-title { font-size: 1.5rem; color: #fff; margin-bottom: .75rem; }
+.item-excerpt{font-size:12px;color:#777;line-height:1.65;font-weight:300}
+.featured-item .item-excerpt{color:#888;font-size:13px}
 
-.item-excerpt { font-size: 13px; color: var(--muted); line-height: 1.65; font-weight: 300; }
-.featured-item .item-excerpt { color: #888; font-size: 14px; }
+.item-arrow{font-family:'Space Mono',monospace;font-size:1.1rem;color:#e5e2d9;padding-top:1.4rem;transition:color .15s}
+.article-item:hover .item-arrow{color:#2d7a26}
 
-.item-arrow { font-family: var(--mono); font-size: 1.2rem; color: var(--faint); padding-top: 1.5rem; transition: color .15s; }
-.article-item:hover .item-arrow { color: var(--green-dark); }
+.featured-read{display:inline-block;margin-top:.75rem;font-family:'Space Mono',monospace;font-size:9px;color:#7fff6e;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid rgba(127,255,110,.3);padding-bottom:1px;text-decoration:none}
 
-.featured-read { display: inline-block; margin-top: 1rem; font-family: var(--mono); font-size: 10px; color: var(--green); text-transform: uppercase; letter-spacing: .06em; border-bottom: 1px solid rgba(127,255,110,.3); padding-bottom: 1px; }
+.ls-footer{border-top:2px solid #111;padding:1.5rem clamp(1rem,4vw,2rem);margin-top:2rem}
+.ls-footer-bottom{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:9px;color:#aaa}
+.ls-footer-bottom a{color:#aaa;text-decoration:none}
 
-.site-footer { border-top: 2px solid var(--black); padding: 1.5rem clamp(1rem,4vw,2rem); margin-top: 2rem; }
-.footer-bottom { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; font-family: var(--mono); font-size: 10px; color: #aaa; }
-.footer-bottom a { color: #aaa; text-decoration: none; }
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.article-item{animation:fadeUp .35s ease both}
+.article-item:nth-child(2){animation-delay:.05s}
+.article-item:nth-child(3){animation-delay:.1s}
+.article-item:nth-child(4){animation-delay:.15s}
+.article-item:nth-child(5){animation-delay:.2s}
 
-@keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-.article-item { animation: fadeUp .35s ease both; }
-.article-item:nth-child(2) { animation-delay: .05s; }
-.article-item:nth-child(3) { animation-delay: .1s; }
-.article-item:nth-child(4) { animation-delay: .15s; }
-.article-item:nth-child(5) { animation-delay: .2s; }
-
-@media(max-width:600px) {
-  .article-item { grid-template-columns: 1fr; }
-  .item-arrow { display: none; }
-  .site-nav { display: none; }
+@media(max-width:600px){
+  .article-item{grid-template-columns:1fr}
+  .item-arrow{display:none}
+  .ls-nav{display:none}
 }
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <a href="index.html" class="site-logo">LONGEVITY<span>SCAN</span>.DE</a>
-    <nav class="site-nav">
-      <a href="index.html" class="nav-link">Startseite</a>
-      <a href="index.html#supplements" class="nav-link">Supplements</a>
-      <a href="index.html#protokolle" class="nav-link">Protokolle</a>
-      <a href="blog.html" class="nav-link active">Blog</a>
-    </nav>
-  </div>
+<header class="ls-header">
+  <a href="index.html" class="ls-logo">LONGEVITY<span>SCAN</span>.DE</a>
+  <nav class="ls-nav">
+    <a href="index.html">Startseite</a>
+    <a href="index.html#supplements">Supplements</a>
+    <a href="index.html#protokolle">Protokolle</a>
+    <a href="blog.html" class="act">Blog</a>
+  </nav>
 </header>
 
 <div class="page-wrap">
-  <div class="page-header">
-    <div class="page-kicker">// Alle Artikel · LongevityScan.de</div>
-    <h1 class="page-title">Blog & Analysen</h1>
-    <p class="page-sub">Studien, Supplement-Tests, Protokolle und Biohacking-Guides — wöchentlich aktualisiert.</p>
-  </div>
+  <div class="page-kicker">// Alle Artikel · LongevityScan.de</div>
+  <h1 class="page-title">Blog & Analysen</h1>
+  <p class="page-sub">Studien, Supplement-Tests, Protokolle und Biohacking-Guides — wöchentlich aktualisiert.</p>
 
   <div class="filter-row">
     <button class="filter-btn active">Alle</button>
@@ -141,16 +117,16 @@ body { font-family: var(--body); background: var(--white); color: var(--black); 
     <a href="artikel-nmn-studie-2026.html" class="article-item featured-item">
       <div>
         <div class="item-pill">🧬 Neue Studie</div>
-        <div class="item-meta"><span>22. Mai 2026</span><span>6 Min. Lesezeit</span><span>Harvard · Aging Cell</span></div>
+        <div class="item-meta"><span>22. Mai 2026</span><span>6 Min.</span><span>Harvard · Aging Cell</span></div>
         <div class="item-title">NMN erhöht NAD+ um 40% — was die neue Harvard-Studie wirklich bedeutet</div>
-        <p class="item-excerpt">Die bisher größte Humanstudie zu NMN wurde veröffentlicht. Die Ergebnisse sind beeindruckend — aber nicht für jeden relevant. Wir haben die Rohdaten analysiert.</p>
-        <span class="featured-read">Artikel lesen →</span>
+        <p class="item-excerpt">Die bisher größte Humanstudie zu NMN wurde veröffentlicht. Die Ergebnisse sind beeindruckend — aber nicht für jeden relevant.</p>
+        <a href="artikel-nmn-studie-2026.html" class="featured-read">Artikel lesen →</a>
       </div>
     </a>
 
     <a href="blog.html" class="article-item">
       <div>
-        <div class="item-pill pill-orange">⚡ Biohacking</div>
+        <div class="item-pill pill-o">⚡ Biohacking</div>
         <div class="item-meta"><span>20. Mai 2026</span><span>4 Min.</span></div>
         <div class="item-title">Zone 2 Training: Warum Peter Attia langsamer läuft — und länger lebt</div>
         <p class="item-excerpt">Das Protokoll erklärt und wie du es ohne teures Equipment in Deutschland umsetzt.</p>
@@ -160,37 +136,37 @@ body { font-family: var(--body); background: var(--white); color: var(--black); 
 
     <a href="blog.html" class="article-item">
       <div>
-        <div class="item-pill pill-blue">😴 Schlaf</div>
+        <div class="item-pill pill-b">😴 Schlaf</div>
         <div class="item-meta"><span>18. Mai 2026</span><span>5 Min.</span></div>
-        <div class="item-title">Oura Ring vs. Whoop 5.0 — ehrlicher Vergleich nach 6 Monaten Test</div>
-        <p class="item-excerpt">Wir haben beide Wearables parallel getestet. Das Ergebnis überrascht besonders für Longevity-Tracking.</p>
+        <div class="item-title">Oura Ring vs. Whoop 5.0 — ehrlicher Vergleich nach 6 Monaten</div>
+        <p class="item-excerpt">Wir haben beide Wearables parallel getestet. Das Ergebnis überrascht.</p>
       </div>
       <div class="item-arrow">→</div>
     </a>
 
     <a href="blog.html" class="article-item">
       <div>
-        <div class="item-pill pill-green">🧪 Supplement-Test</div>
+        <div class="item-pill pill-g">🧪 Supplement-Test</div>
         <div class="item-meta"><span>15. Mai 2026</span><span>8 Min.</span></div>
         <div class="item-title">MoleQlar ONE im Test: Alle 13 Wirkstoffe auf dem Prüfstand</div>
-        <p class="item-excerpt">Deutschlands bekanntestes Longevity-Supplement unter der Lupe. Was ist evidenzbasiert, was ist Marketing?</p>
+        <p class="item-excerpt">Was ist evidenzbasiert, was ist Marketing?</p>
       </div>
       <div class="item-arrow">→</div>
     </a>
 
     <a href="blog.html" class="article-item">
       <div>
-        <div class="item-pill pill-green">🧬 Epigenetik</div>
+        <div class="item-pill pill-g">🧬 Epigenetik</div>
         <div class="item-meta"><span>10. Mai 2026</span><span>7 Min.</span></div>
-        <div class="item-title">Biologisches Alter messen in Deutschland — welcher Test lohnt sich wirklich?</div>
-        <p class="item-excerpt">GrimAge, PhenoAge, DunedinPACE: Ein ehrlicher Vergleich der Tests die in Deutschland verfügbar sind.</p>
+        <div class="item-title">Biologisches Alter messen in Deutschland — welcher Test lohnt sich?</div>
+        <p class="item-excerpt">GrimAge, PhenoAge, DunedinPACE — ein ehrlicher Vergleich.</p>
       </div>
       <div class="item-arrow">→</div>
     </a>
 
     <a href="blog.html" class="article-item">
       <div>
-        <div class="item-pill pill-pink">🍽 Ernährung</div>
+        <div class="item-pill pill-p">🍽 Ernährung</div>
         <div class="item-meta"><span>12. Mai 2026</span><span>5 Min.</span></div>
         <div class="item-title">Intervallfasten 2026: Was die Wissenschaft jetzt wirklich sagt</div>
         <p class="item-excerpt">Neue Meta-Analysen revidieren frühere Studien. Was bleibt, was fällt weg.</p>
@@ -200,10 +176,10 @@ body { font-family: var(--body); background: var(--white); color: var(--black); 
 
     <a href="blog.html" class="article-item">
       <div>
-        <div class="item-pill pill-blue">📋 Protokoll</div>
+        <div class="item-pill pill-b">📋 Protokoll</div>
         <div class="item-meta"><span>8. Mai 2026</span><span>9 Min.</span></div>
-        <div class="item-title">Bryan Johnson Blueprint — was davon für normale Menschen in Deutschland sinnvoll ist</div>
-        <p class="item-excerpt">Johnson gibt 2 Millionen pro Jahr aus. Wir destillieren was für unter 100€/Monat umsetzbar ist.</p>
+        <div class="item-title">Bryan Johnson Blueprint — was für Deutsche unter 100€/Monat sinnvoll ist</div>
+        <p class="item-excerpt">2 Millionen pro Jahr — wir destillieren das Wesentliche.</p>
       </div>
       <div class="item-arrow">→</div>
     </a>
@@ -211,8 +187,8 @@ body { font-family: var(--body); background: var(--white); color: var(--black); 
   </div>
 </div>
 
-<footer class="site-footer">
-  <div class="footer-bottom">
+<footer class="ls-footer">
+  <div class="ls-footer-bottom">
     <span>© 2026 LongevityScan.de — Keine medizinische Beratung</span>
     <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
   </div>
