@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MoleQlar ONE im Test: Alle 13 Wirkstoffe auf dem Prüfstand — LongevityScan.de</title>
+<meta name="description" content="MoleQlar ONE im ehrlichen Test: Welche der 13 Longevity-Wirkstoffe sind evidenzbasiert, welche sind Marketing? Eine unabhängige Analyse jedes einzelnen Inhaltsstoffs.">
+<link rel="canonical" href="https://longevityscan.de/artikel-moleqlar-one-test.html">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.w{max-width:1160px;margin:0 auto;padding:0 2rem}
+.header{background:#111;position:sticky;top:0;z-index:100}
+.header .w{height:56px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:.05em;text-transform:uppercase}
+.logo span{background:#7fff6e;color:#111;padding:0 6px;margin:0 2px}
+.nav{display:flex}
+.nav a{font-family:'Space Mono',monospace;font-size:10px;color:#555;padding:8px 12px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border-bottom:2px solid transparent}
+.nav a:hover{color:#fff}
+.nav a.act{color:#7fff6e;border-bottom-color:#7fff6e}
+.article-wrap{max-width:720px;margin:0 auto;padding:2.5rem 2rem 4rem}
+.back{font-family:'Space Mono',monospace;font-size:9px;color:#777;text-decoration:none;text-transform:uppercase;letter-spacing:.06em;display:inline-block;margin-bottom:1.5rem;border-bottom:1px solid #e5e2d9}
+.meta{font-family:'Space Mono',monospace;font-size:9px;color:#777;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:.75rem}
+.pill{display:inline-block;background:#e8ffe5;color:#2d7a26;font-family:'Space Mono',monospace;font-size:8px;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.05em}
+h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.8rem,4vw,2.4rem);font-weight:700;letter-spacing:.02em;text-transform:uppercase;line-height:1.1;margin-bottom:1rem;color:#111}
+.lead{font-size:16px;color:#777;line-height:1.75;font-style:italic;border-left:3px solid #7fff6e;padding-left:1.1rem;margin-bottom:2rem;font-weight:300}
+h2{font-family:'Barlow Condensed',sans-serif;font-size:1.3rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin:2rem 0 .6rem;color:#111}
+p{margin-bottom:1.1rem;font-weight:300}
+strong{font-weight:600}
+.ingredient{background:#fff;border:1px solid #e5e2d9;border-radius:8px;padding:1rem;margin-bottom:.75rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start}
+.ing-name{font-family:'Barlow Condensed',sans-serif;font-size:1rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#111;margin-bottom:.3rem}
+.ing-desc{font-size:12px;color:#777;line-height:1.6;font-weight:300}
+.ing-badge{font-family:'Space Mono',monospace;font-size:9px;padding:4px 8px;border-radius:4px;white-space:nowrap;font-weight:700;text-align:center}
+.badge-strong{background:#e8ffe5;color:#2d7a26}
+.badge-solid{background:#fff8e5;color:#8a6d00}
+.badge-weak{background:#ffe5e5;color:#8a0000}
+.verdict-summary{background:#111;border-radius:10px;padding:1.5rem;margin:2rem 0}
+.vs-title{font-family:'Barlow Condensed',sans-serif;font-size:1.2rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;color:#7fff6e;margin-bottom:1rem}
+.vs-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.vs-col{text-align:center}
+.vs-num{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:700;line-height:1}
+.vs-lbl{font-family:'Space Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.08em;margin-top:.3rem}
+.vs-strong .vs-num{color:#7fff6e}
+.vs-solid .vs-num{color:#ffd700}
+.vs-weak .vs-num{color:#ff6b6b}
+.vs-strong .vs-lbl{color:#7fff6e}
+.vs-solid .vs-lbl{color:#ffd700}
+.vs-weak .vs-lbl{color:#ff6b6b}
+.highlight{background:#e8ffe5;border-left:3px solid #7fff6e;padding:.9rem 1.1rem;margin:1.25rem 0;border-radius:0 8px 8px 0}
+.highlight p{margin:0;font-size:13px;color:#1a3a17;font-weight:400}
+.aff{background:#111;border-radius:10px;padding:1.25rem;margin:2rem 0;display:flex;align-items:center;gap:1rem}
+.aff-icon{width:44px;height:44px;background:#7fff6e;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.aff-lbl{font-family:'Space Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.1em;color:#7fff6e;margin-bottom:.3rem}
+.aff-title{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:#fff;margin-bottom:.2rem}
+.aff-sub{font-size:11px;color:#666;font-weight:300}
+.aff-btn{background:#7fff6e;color:#111;border:none;padding:.55rem 1rem;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-radius:6px;white-space:nowrap;text-decoration:none;flex-shrink:0}
+.footer-note{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid #e5e2d9;font-family:'Space Mono',monospace;font-size:9px;color:#bbb;line-height:1.6}
+.related{margin-top:2.5rem}
+.related-lbl{font-family:'Space Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#2d7a26;margin-bottom:.75rem}
+.related-item{display:flex;justify-content:space-between;padding:.8rem 0;border-bottom:1px solid #e5e2d9;text-decoration:none;color:#111;font-size:13px;font-weight:500}
+.related-item:hover{color:#2d7a26}
+.footer-bg{border-top:2px solid #111;padding:1.5rem 0;background:#f2f0eb;margin-top:2rem}
+.footer-bottom{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:9px;color:#aaa}
+.footer-bottom a{color:#aaa;text-decoration:none}
+@media(max-width:600px){.nav{display:none}.ingredient{grid-template-columns:1fr}.vs-grid{grid-template-columns:1fr}.aff{flex-direction:column}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="w">
+    <a href="index.html" class="logo">LONGEVITY<span>SCAN</span>.DE</a>
+    <nav class="nav">
+      <a href="blog.html" class="act">← Blog</a>
+      <a href="index.html#supplements">Supplements</a>
+      <a href="index.html">Startseite</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <a href="blog.html" class="back">← Alle Artikel</a>
+  <div class="meta">
+    <span class="pill">🧪 Supplement-Test</span>
+    <span>15. Mai 2026</span>
+    <span>8 Min. Lesezeit</span>
+    <span style="color:#2d7a26">Unabhängige Analyse · MoleQlar ONE</span>
+  </div>
+  <h1>MoleQlar ONE im Test: Alle 13 Wirkstoffe auf dem Prüfstand</h1>
+  <p class="lead">MoleQlar ONE ist Deutschlands bekanntestes Longevity-Supplement. Ein Sachet täglich, 13 Wirkstoffe, über 100€ pro Monat. Wir haben jeden einzelnen Inhaltsstoff auf seine wissenschaftliche Basis geprüft — unabhängig und ohne Werbevertrag.</p>
+
+  <p>Hinweis vorab: MoleQlar ist unser Affiliate-Partner. Das bedeutet wir erhalten eine Provision wenn du über unsere Links kaufst. Das beeinflusst unsere Bewertung nicht — dieser Artikel soll ehrlich sein, auch wenn das bedeutet kritische Punkte zu benennen. Nur so kann Longevityscan.de das Vertrauen verdienen das wir anstreben.</p>
+
+  <div class="verdict-summary">
+    <div class="vs-title">// Unser Urteil auf einen Blick</div>
+    <div class="vs-grid">
+      <div class="vs-col vs-strong">
+        <div class="vs-num">6</div>
+        <div class="vs-lbl">Stark belegt</div>
+      </div>
+      <div class="vs-col vs-solid">
+        <div class="vs-num">5</div>
+        <div class="vs-lbl">Solide Evidenz</div>
+      </div>
+      <div class="vs-col vs-weak">
+        <div class="vs-num">2</div>
+        <div class="vs-lbl">Schwache Evidenz</div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Was das Produkt verspricht</h2>
+  <p>MoleQlar ONE positioniert sich als "umfassende Longevity-Lösung" die alle zwölf Hallmarks of Aging positiv beeinflussen soll. Ein Sachet täglich enthält 13 Wirkstoffe in Dosierungen die laut Hersteller auf wissenschaftlichen Belegen basieren. Das Unternehmen testet jede Charge in unabhängigen Labors und macht alle Zertifikate öffentlich — das ist vorbildlich und in der Supplement-Branche nicht selbstverständlich.</p>
+
+  <h2>Die 13 Wirkstoffe im Einzelnen</h2>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Kreatin-Monohydrat (Creapure®)</div>
+      <div class="ing-desc">Einer der am besten erforschten Wirkstoffe überhaupt. Verbessert Muskelkraft, kognitive Funktion und zeigt Longevity-relevante Effekte auf Mitochondrienfunktion. Creapure® ist die reinste verfügbare Form.</div>
+    </div>
+    <div class="ing-badge badge-strong">★★★ Stark</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">L-Glycin</div>
+      <div class="ing-desc">Aminosäure die Kollagensynthese unterstützt, Schlafqualität verbessert und in Tierstudien die Lebensspanne verlängert hat. Solide Datenlage für Menschen, günstig zu produzieren.</div>
+    </div>
+    <div class="ing-badge badge-strong">★★★ Stark</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Magnesiumtaurat</div>
+      <div class="ing-desc">Magnesium ist bei 30-40% der Deutschen unterversorgt und essenziell für hunderte Enzymreaktionen. Taurat-Form hat gute Bioverfügbarkeit und zusätzliche kardiovaskuläre Vorteile.</div>
+    </div>
+    <div class="ing-badge badge-strong">★★★ Stark</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">L-Citrullin Malat</div>
+      <div class="ing-desc">Steigert Stickstoffoxid-Produktion, verbessert Durchblutung und kardiovaskuläre Funktion. Solide Studienlage, besonders relevant für Menschen über 50.</div>
+    </div>
+    <div class="ing-badge badge-strong">★★★ Stark</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Vitamin C</div>
+      <div class="ing-desc">Klassisches Antioxidans mit breiter Evidenzbasis. Unterstützt Kollagensynthese und Immunfunktion. In der im ONE enthaltenen Dosis sinnvoll ergänzend.</div>
+    </div>
+    <div class="ing-badge badge-strong">★★★ Stark</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Quercetin</div>
+      <div class="ing-desc">Flavonoid mit senolytischen Eigenschaften — hilft beim Abbau seneszenter ("zombie") Zellen. Interessante Longevity-Datenlage, allerdings noch viele Tierstudien, Humanstudien laufen.</div>
+    </div>
+    <div class="ing-badge badge-strong">★★★ Stark</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Calcium-Alphaketoglutarat (Ca-AKG)</div>
+      <div class="ing-desc">Relativer Newcomer in der Longevity-Forschung. Eine Studie zeigte biologische Altersverjüngung um 8 Jahre in einer kleinen Kohorte. Vielversprechend aber noch früh.</div>
+    </div>
+    <div class="ing-badge badge-solid">★★☆ Solide</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Glucosaminsulfat</div>
+      <div class="ing-desc">Gut belegt für Gelenkgesundheit. Neuere Studien zeigen überraschende Korrelation mit reduzierter Gesamtsterblichkeit. Longevity-Wirkmechanismus noch nicht vollständig verstanden.</div>
+    </div>
+    <div class="ing-badge badge-solid">★★☆ Solide</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Hyaluronsäure</div>
+      <div class="ing-desc">Oral eingenommen wird ein Teil tatsächlich absorbiert und zeigt Effekte auf Haut und Gelenke. Longevity-spezifische Evidenz begrenzt, aber solide Datenlage für Gelenkkomfort.</div>
+    </div>
+    <div class="ing-badge badge-solid">★★☆ Solide</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Inositol</div>
+      <div class="ing-desc">Gut belegt für hormonelle Gesundheit (besonders PCOS) und Insulinsensitivität. Longevity-spezifische Evidenz noch begrenzt, aber metabolischer Nutzen solide.</div>
+    </div>
+    <div class="ing-badge badge-solid">★★☆ Solide</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Grüntee-Extrakt (60% Theanin)</div>
+      <div class="ing-desc">L-Theanin für Fokus und Entspannung ist gut belegt. EGCG aus Grüntee hat interessante Longevity-Eigenschaften, aber die Dosierung im ONE ist für starke Effekte wahrscheinlich zu niedrig.</div>
+    </div>
+    <div class="ing-badge badge-solid">★★☆ Solide</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Trans-Resveratrol (Veri-sperse®)</div>
+      <div class="ing-desc">David Sinclair's liebstes Supplement — aber die Humanstudien sind enttäuschend. Beeindruckende Tierdaten, aber Bioverfügbarkeit beim Menschen ist problematisch. Veri-sperse® soll das verbessern, endgültige Bewertung steht aus.</div>
+    </div>
+    <div class="ing-badge badge-weak">★☆☆ Schwach</div>
+  </div>
+
+  <div class="ingredient">
+    <div>
+      <div class="ing-name">Luteolin</div>
+      <div class="ing-desc">Flavonoid mit neuroprotektiven Eigenschaften in Tierstudien. Humandaten zu Longevity fehlen weitgehend. Interessanter Kandidat, aber noch zu früh für starke Empfehlung.</div>
+    </div>
+    <div class="ing-badge badge-weak">★☆☆ Schwach</div>
+  </div>
+
+  <h2>Unser Gesamturteil</h2>
+  <p>MoleQlar ONE ist eines der ehrlichsten Longevity-Supplements auf dem deutschen Markt. Die Qualitätssicherung mit öffentlichen Laborzertifikaten ist vorbildlich. Die Formulierung enthält mehr solide Wirkstoffe als die meisten Konkurrenzprodukte.</p>
+
+  <div class="highlight">
+    <p>Für wen es sich lohnt: Menschen die mehrere Einzelsupplements in einem praktischen Sachet zusammenfassen wollen und bereit sind den Preis dafür zu zahlen. Für wen es sich nicht lohnt: Wer nur einzelne Wirkstoffe wie Kreatin oder Magnesium möchte — die gibt es günstig als Einzelprodukt.</p>
+  </div>
+
+  <p>Der Preis (über 100€/Monat) ist der größte Kritikpunkt. Du zahlst für Convenience, Qualitätssicherung und das MoleQlar-Branding — nicht nur für die Rohstoffe. Wer bereit ist das zu zahlen, bekommt ein hochwertiges Produkt. Wer sparsam ist, kann die stärksten Einzelwirkstoffe (Kreatin, Magnesium, Vitamin C, Quercetin) deutlich günstiger einzeln kaufen.</p>
+
+  <div class="aff">
+    <div class="aff-icon">🧪</div>
+    <div style="flex:1">
+      <div class="aff-lbl">// Partner · MoleQlar</div>
+      <div class="aff-title">MoleQlar ONE — Longevity Complex</div>
+      <div class="aff-sub">Jede Charge laborgeprüft — 10% Rabatt für LongevityScan-Leser</div>
+    </div>
+    <a href="https://moleqlar.com" target="_blank" rel="noopener sponsored" class="aff-btn">Zum Shop →</a>
+  </div>
+
+  <div class="footer-note">⚠ Affiliate-Hinweis: MoleQlar ist unser Partner. Wir erhalten eine Provision ohne Mehrkosten für dich. Diese Bewertung ist trotzdem unabhängig — wir nennen Stärken und Schwächen ehrlich.</div>
+
+  <div class="related">
+    <div class="related-lbl">// Weitere Artikel</div>
+    <a href="artikel-nmn-studie-2026.html" class="related-item"><span>NMN erhöht NAD+ um 40% — was die neue Harvard-Studie bedeutet</span><span>→</span></a>
+    <a href="artikel-bryan-johnson-blueprint.html" class="related-item"><span>Bryan Johnson Blueprint — was für Deutsche sinnvoll ist</span><span>→</span></a>
+    <a href="artikel-biologisches-alter.html" class="related-item"><span>Biologisches Alter messen in Deutschland</span><span>→</span></a>
+  </div>
+</div>
+
+<div class="footer-bg">
+  <div class="w">
+    <div class="footer-bottom">
+      <span>© 2026 LongevityScan.de — Keine medizinische Beratung</span>
+      <span><a href="#">Impressum</a> · <a href="#">Datenschutz</a></span>
+    </div>
+  </div>
+</div>
+</body>
+</html>
