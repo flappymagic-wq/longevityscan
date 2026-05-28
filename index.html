@@ -49,7 +49,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
 .lbl::after{content:'';flex:1;height:1px;background:#e5e2d9}
 
 /* FEATURED */
-.feat{display:grid;grid-template-columns:300px 1fr;background:#fff;border:1px solid #e5e2d9;border-radius:10px;overflow:hidden;margin-bottom:2rem}
+.feat{display:grid;grid-template-columns:300px 1fr;background:#fff;border:1px solid #e5e2d9;border-radius:10px;overflow:hidden;margin-bottom:2rem;transition:border-color .15s,transform .15s}.feat:hover{border-color:#bbb;transform:translateY(-2px)}
 .feat-img{background:#111;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;min-height:180px}
 .feat-emoji{font-size:44px}
 .feat-tag{font-family:'Space Mono',monospace;font-size:8px;color:#444;text-transform:uppercase;letter-spacing:.08em}
@@ -128,12 +128,9 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
   <div class="w">
     <a href="/" class="logo">LONGEVITY<span>SCAN</span>.DE</a>
     <nav class="nav">
-      <a href="#studien" class="act">Studien</a>
-      <a href="#supplements">Supplements</a>
-      <a href="#protokolle">Protokolle</a>
-      <a href="#biohacking">Biohacking</a>
+      <a href="index.html" class="act">Startseite</a>
       <a href="blog.html">Blog</a>
-      <a href="#shop" style="color:#7fff6e">Shop →</a>
+      <a href="https://moleqlar.com" target="_blank" rel="noopener sponsored" style="color:#7fff6e">Shop →</a>
     </nav>
   </div>
 </header>
@@ -165,7 +162,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
   <div class="w">
     <div>
       <div class="lbl" id="studien">Studie der Woche</div>
-      <div class="feat">
+      <a href="artikel-nmn-studie-2026.html" class="feat" style="text-decoration:none;color:inherit;display:grid;grid-template-columns:300px 1fr;">
         <div class="feat-img">
           <div class="feat-emoji">🧬</div>
           <div class="feat-tag">// NMN · NAD+ · Zelluläres Altern</div>
@@ -175,9 +172,8 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
           <div class="feat-title">NMN erhöht NAD+ um 40% — was die neue Harvard-Studie wirklich bedeutet</div>
           <div class="feat-exc">Die bisher größte Humanstudie zu NMN. Beeindruckend — aber nicht für jeden relevant. Wir haben die Rohdaten analysiert.</div>
           <div class="feat-meta"><span>22. Mai 2026</span><span>6 Min.</span><span style="color:#2d7a26">Harvard · Aging Cell</span></div>
-          <a href="artikel-nmn-studie-2026.html" class="read">Artikel lesen →</a>
         </div>
-      </div>
+      </a>
 
       <div class="lbl" id="biohacking">Aktuelle Beiträge</div>
       <div class="grid">
@@ -204,7 +200,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
           <div class="supp"><span class="sname">Resveratrol</span><span class="stars sm">★★☆ Solide</span></div>
           <div class="supp"><span class="sname">Metformin</span><span class="stars sl">★☆☆ Unklar</span></div>
           <div class="supp"><span class="sname">Rapamycin</span><span class="stars sl">★☆☆ Risiko</span></div>
-          <a href="blog.html" style="display:block;margin-top:.6rem;font-family:'Space Mono',monospace;font-size:9px;color:#2d7a26;text-transform:uppercase;letter-spacing:.06em;text-decoration:none">→ Vollständiger Supplement-Guide</a>
+          <a href="artikel-supplement-guide.html" style="display:block;margin-top:.6rem;font-family:'Space Mono',monospace;font-size:9px;color:#2d7a26;text-transform:uppercase;letter-spacing:.06em;text-decoration:none">→ Vollständiger Supplement-Guide</a>
         </div>
       </div>
       <div class="aff" id="shop">
