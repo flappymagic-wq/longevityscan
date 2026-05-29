@@ -23,7 +23,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
 .logo{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
 .logo span{background:#7fff6e;color:#111;padding:0 5px;margin:0 2px}
 .nav{display:flex;gap:0}
-.nav a{font-family:'Space Mono',monospace;font-size:10px;color:#555;padding:8px 12px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border-bottom:2px solid transparent;transition:color .15s;white-space:nowrap}
+.nav a{font-family:'Space Mono',monospace;font-size:10px;color:#555;padding:8px 10px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;border-bottom:2px solid transparent;transition:color .15s;white-space:nowrap}
 .nav a:hover{color:#fff}
 .nav a.act{color:#7fff6e;border-bottom-color:#7fff6e}
 
@@ -99,11 +99,13 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
   .hero-h1{font-size:4rem}
 }
 
+@media(max-width:959px){.nav-shop{display:none}}
 @media(min-width:960px){
+  .hero-right{display:flex !important}
   .hero{background:linear-gradient(to right,#7fff6e 50%,#111 50%)}
   .hero-inner{display:grid;grid-template-columns:1fr 1fr;padding:0;max-width:1160px;margin:0 auto}
   .hero-left{padding:3rem 2rem 3rem 1.5rem;display:flex;flex-direction:column;justify-content:space-between}
-  .hero-right{background:transparent;padding:3rem 1.5rem 3rem 2rem;display:flex;flex-direction:column;justify-content:space-between}
+  .hero-right{background:transparent;padding:3rem 1.5rem 3rem 2rem;display:flex!important;flex-direction:column;justify-content:space-between}
   .hero-right p{font-size:14px;color:#888;line-height:1.8;font-weight:300;margin-bottom:1.5rem}
   .hero-stats{display:flex;gap:2rem}
   .stat-num{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700;color:#7fff6e;line-height:1}
@@ -155,7 +157,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
     <nav class="nav">
       <a href="index.html" class="act">Startseite</a>
       <a href="blog.html">Blog</a>
-      <a href="https://moleqlar.com" target="_blank" rel="noopener sponsored" style="color:#7fff6e">Shop →</a>
+      <a href="https://moleqlar.com" target="_blank" rel="noopener sponsored" style="color:#7fff6e" class="nav-shop">Shop →</a>
     </nav>
   </div>
 </header>
@@ -170,8 +172,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
       <div class="hero-slogan">Mehr Leben pro Jahr.</div>
       <div class="hero-bottom">Evidenzbasiert · Transparent · Kein Marketing-Hype</div>
     </div>
-    <!-- Desktop only -->
-    <div class="hero-right">
+    <div class="hero-right" style="display:none">
       <p>Wir scannen die Longevity-Forschung und filtern was wirklich funktioniert — ohne Hype, ohne Marketing.</p>
       <div class="hero-stats">
         <div><div class="stat-num">31 Mrd.$</div><div class="stat-lbl">Marktvolumen</div></div>
