@@ -159,8 +159,8 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
       <p class="blog-hero-sub">Studien, Supplement-Tests, Protokolle und Biohacking-Guides — wöchentlich aktualisiert. Evidenzbasiert, transparent, kein Hype.</p>
     </div>
     <div class="blog-stats">
-      <div><div class="blog-stat-num">10</div><div class="blog-stat-lbl">Artikel</div></div>
-      <div><div class="blog-stat-num">5</div><div class="blog-stat-lbl">Kategorien</div></div>
+      <div><div class="blog-stat-num">13</div><div class="blog-stat-lbl">Artikel</div></div>
+      <div><div class="blog-stat-num">7</div><div class="blog-stat-lbl">Kategorien</div></div>
       <div><div class="blog-stat-num">2026</div><div class="blog-stat-lbl">Aktuell</div></div>
     </div>
   </div>
@@ -329,13 +329,13 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
       <div class="widget">
         <div class="wh">// Kategorien</div>
         <div class="wb">
-          <a href="#" class="cat-link" onclick="filterCat(event,'studien')"><span>🧬 Studien</span><span class="cat-count">1</span></a>
-          <a href="#" class="cat-link" onclick="filterCat(event,'supplements')"><span>🧪 Supplements</span><span class="cat-count">6</span></a>
-          <a href="#" class="cat-link" onclick="filterCat(event,'biohacking')"><span>⚡ Biohacking</span><span class="cat-count">3</span></a>
-          <a href="#" class="cat-link" onclick="filterCat(event,'ernaehrung')"><span>🍽 Ernährung</span><span class="cat-count">2</span></a>
-          <a href="#" class="cat-link" onclick="filterCat(event,'schlaf')"><span>😴 Schlaf & HRV</span><span class="cat-count">4</span></a>
-          <a href="#" class="cat-link" onclick="filterCat(event,'protokoll')"><span>📋 Protokoll</span><span class="cat-count">2</span></a>
-          <a href="#" class="cat-link" onclick="filterCat(event,'epigenetik')"><span>🔬 Epigenetik</span><span class="cat-count">2</span></a>
+          <a href="#" class="cat-link" data-cat="studien" onclick="filterCat(event,'studien')"><span>🧬 Studien</span><span class="cat-count">1</span></a>
+          <a href="#" class="cat-link" data-cat="supplements" onclick="filterCat(event,'supplements')"><span>🧪 Supplements</span><span class="cat-count">6</span></a>
+          <a href="#" class="cat-link" data-cat="biohacking" onclick="filterCat(event,'biohacking')"><span>⚡ Biohacking</span><span class="cat-count">3</span></a>
+          <a href="#" class="cat-link" data-cat="ernaehrung" onclick="filterCat(event,'ernaehrung')"><span>🍽 Ernährung</span><span class="cat-count">2</span></a>
+          <a href="#" class="cat-link" data-cat="schlaf" onclick="filterCat(event,'schlaf')"><span>😴 Schlaf & HRV</span><span class="cat-count">4</span></a>
+          <a href="#" class="cat-link" data-cat="protokoll" onclick="filterCat(event,'protokoll')"><span>📋 Protokoll</span><span class="cat-count">2</span></a>
+          <a href="#" class="cat-link" data-cat="epigenetik" onclick="filterCat(event,'epigenetik')"><span>🔬 Epigenetik</span><span class="cat-count">2</span></a>
         </div>
       </div>
 
@@ -415,6 +415,25 @@ function applyFilter(cat) {
       c.classList.toggle('hidden', c.dataset.cat !== cat);
     });
   }
+
+  // Update sidebar category counts dynamically
+  document.querySelectorAll('.cat-link[data-cat]').forEach(link => {
+    const linkCat = link.dataset.cat;
+    if (cat === 'alle') {
+      // Restore original counts
+      const allItems = [...(featured ? [featured] : []), ...Array.from(cards)];
+      const count = allItems.filter(el => el.dataset.cat === linkCat).length;
+      const badge = link.querySelector('.cat-count');
+      if (badge) badge.textContent = count;
+      link.style.opacity = '1';
+    } else {
+      const allItems = [...(featured ? [featured] : []), ...Array.from(cards)];
+      const count = allItems.filter(el => el.dataset.cat === linkCat).length;
+      const badge = link.querySelector('.cat-count');
+      if (badge) badge.textContent = count;
+      link.style.opacity = (linkCat === cat) ? '1' : '0.4';
+    }
+  });
 }
 </script>
 
