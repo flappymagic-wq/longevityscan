@@ -170,7 +170,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
 <div class="filter-wrap">
   <div class="w">
     <button class="filter-btn active" data-cat="alle">Alle</button>
-    <button class="filter-btn" data-cat="supplements">🧬 Studien</button>
+    <button class="filter-btn" data-cat="studien">🧬 Studien</button>
     <button class="filter-btn" data-cat="supplements">🧪 Supplements</button>
     <button class="filter-btn" data-cat="biohacking">⚡ Biohacking</button>
     <button class="filter-btn" data-cat="ernaehrung">🍽 Ernährung</button>
@@ -330,12 +330,12 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
         <div class="wh">// Kategorien</div>
         <div class="wb">
           <a href="#" class="cat-link" data-cat="studien" onclick="filterCat(event,'studien')"><span>🧬 Studien</span><span class="cat-count">1</span></a>
-          <a href="#" class="cat-link" data-cat="supplements" onclick="filterCat(event,'supplements')"><span>🧪 Supplements</span><span class="cat-count">6</span></a>
-          <a href="#" class="cat-link" data-cat="biohacking" onclick="filterCat(event,'biohacking')"><span>⚡ Biohacking</span><span class="cat-count">3</span></a>
-          <a href="#" class="cat-link" data-cat="ernaehrung" onclick="filterCat(event,'ernaehrung')"><span>🍽 Ernährung</span><span class="cat-count">2</span></a>
-          <a href="#" class="cat-link" data-cat="schlaf" onclick="filterCat(event,'schlaf')"><span>😴 Schlaf & HRV</span><span class="cat-count">4</span></a>
-          <a href="#" class="cat-link" data-cat="protokoll" onclick="filterCat(event,'protokoll')"><span>📋 Protokoll</span><span class="cat-count">2</span></a>
-          <a href="#" class="cat-link" data-cat="epigenetik" onclick="filterCat(event,'epigenetik')"><span>🔬 Epigenetik</span><span class="cat-count">2</span></a>
+          <a href="#" class="cat-link" data-cat="supplements" onclick="filterCat(event,'supplements')"><span>🧪 Supplements</span><span class="cat-count">4</span></a>
+          <a href="#" class="cat-link" data-cat="biohacking" onclick="filterCat(event,'biohacking')"><span>⚡ Biohacking</span><span class="cat-count">2</span></a>
+          <a href="#" class="cat-link" data-cat="ernaehrung" onclick="filterCat(event,'ernaehrung')"><span>🍽 Ernährung</span><span class="cat-count">1</span></a>
+          <a href="#" class="cat-link" data-cat="schlaf" onclick="filterCat(event,'schlaf')"><span>😴 Schlaf & HRV</span><span class="cat-count">3</span></a>
+          <a href="#" class="cat-link" data-cat="protokoll" onclick="filterCat(event,'protokoll')"><span>📋 Protokoll</span><span class="cat-count">1</span></a>
+          <a href="#" class="cat-link" data-cat="epigenetik" onclick="filterCat(event,'epigenetik')"><span>🔬 Epigenetik</span><span class="cat-count">1</span></a>
         </div>
       </div>
 
@@ -399,6 +399,9 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
       applyFilter(cat);
       btn.scrollIntoView({behavior:'smooth', block:'nearest'});
     }
+  } else {
+    // On initial load with no filter: set correct counts from actual DOM
+    applyFilter('alle');
   }
 })();
 
