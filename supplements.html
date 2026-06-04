@@ -74,18 +74,18 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
 /* EVIDENCE RANKING */
 .ranking-section{padding:2rem 0}
 .ranking-grid{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
-.rank-item{display:grid;grid-template-columns:2rem 1fr auto;gap:1rem;align-items:center;background:#fff;border:1px solid #e5e2d9;border-radius:8px;padding:.9rem 1.1rem;text-decoration:none;color:#111;transition:border-color .15s}
+.rank-item{display:grid;grid-template-columns:2rem 1fr auto auto;gap:1rem;align-items:center;background:#fff;border:1px solid #e5e2d9;border-radius:8px;padding:.9rem 1.1rem;text-decoration:none;color:#111;transition:border-color .15s}
 .rank-item:hover{border-color:#7fff6e}
 .rank-num{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:#e5e2d9;line-height:1}
 .rank-body{}
 .rank-name{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#111;margin-bottom:.2rem}
 .rank-desc{font-size:12px;color:#777;font-weight:300;line-height:1.5}
-.rank-meta{text-align:right}
+.rank-meta{text-align:right}.rank-shop{display:flex;align-items:center}
 .rank-badge{font-family:'Space Mono',monospace;font-size:8px;padding:3px 8px;border-radius:4px;display:block;margin-bottom:.3rem;white-space:nowrap}
 .badge-a{background:#e8ffe5;color:#2d7a26}
 .badge-b{background:#e5f0ff;color:#1a4fa8}
 .badge-c{background:#fff8e5;color:#d4900a}
-.rank-dose{font-family:'Space Mono',monospace;font-size:9px;color:#aaa}
+.rank-dose{font-family:'Space Mono',monospace;font-size:9px;color:#aaa;display:block;margin-bottom:.3rem}.rank-shop-btn{display:inline-block;background:#7fff6e;color:#111;font-family:'Space Mono',monospace;font-size:8px;font-weight:700;padding:3px 9px;border-radius:4px;text-decoration:none;white-space:nowrap}
 
 /* SUPPLEMENT DEEP DIVES */
 .deepdive-section{padding:2rem 0}
@@ -128,8 +128,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
 @media(max-width:600px){
   .nav{display:none}
   .deepdive-grid{grid-template-columns:1fr}
-  .rank-item{grid-template-columns:2rem 1fr}
-  .rank-meta{display:none}
+  .rank-item{grid-template-columns:2rem 1fr}.rank-meta,.rank-shop{display:none}
   .start-here{grid-template-columns:1fr}
   .aff{flex-direction:column}
   .hero-stats{gap:1.5rem}
@@ -198,6 +197,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
     <p style="font-size:14px;color:#777;font-weight:300;margin-bottom:.5rem">Sortiert nach Stärke der Evidenz in Humanstudien. Evidenz-Level: <span style="background:#e8ffe5;color:#2d7a26;font-family:'Space Mono',monospace;font-size:8px;padding:1px 6px;border-radius:3px">A</span> = stark · <span style="background:#e5f0ff;color:#1a4fa8;font-family:'Space Mono',monospace;font-size:8px;padding:1px 6px;border-radius:3px">B</span> = gut · <span style="background:#fff8e5;color:#d4900a;font-family:'Space Mono',monospace;font-size:8px;padding:1px 6px;border-radius:3px">C</span> = vielversprechend</p>
 
     <div class="ranking-grid">
+
       <a href="artikel-kreatin-longevity.html" class="rank-item">
         <div class="rank-num">01</div>
         <div class="rank-body">
@@ -207,6 +207,9 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
         <div class="rank-meta">
           <span class="rank-badge badge-a">Evidenz A</span>
           <span class="rank-dose">3–5g täglich</span>
+        </div>
+        <div class="rank-shop">
+          <a href="https://moleqlar.com/products/kreatin-monohydrat-pulver?_pos=1&_psq=kreatin&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
         </div>
       </a>
 
@@ -219,7 +222,9 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
         <div class="rank-meta">
           <span class="rank-badge badge-a">Evidenz A</span>
           <span class="rank-dose">2g EPA+DHA täglich</span>
-        <a href="https://moleqlar.com/products/omega-3-kapseln?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" style="display:block;margin-top:.4rem;font-family:'Space Mono',monospace;font-size:8px;color:#2d7a26;text-decoration:none">→ Bei MoleQlar</a>
+        </div>
+        <div class="rank-shop">
+          <a href="https://moleqlar.com/products/omega-3-kapseln?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
         </div>
       </a>
 
@@ -232,7 +237,9 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
         <div class="rank-meta">
           <span class="rank-badge badge-a">Evidenz A</span>
           <span class="rank-dose">2000–4000 IE D3 täglich</span>
-        <a href="https://moleqlar.com?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" style="display:block;margin-top:.4rem;font-family:'Space Mono',monospace;font-size:8px;color:#2d7a26;text-decoration:none">→ Bei MoleQlar</a>
+        </div>
+        <div class="rank-shop">
+          <a href="https://moleqlar.com/products/vitamin-d3-k2-tropfen?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
         </div>
       </a>
 
@@ -245,7 +252,9 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
         <div class="rank-meta">
           <span class="rank-badge badge-b">Evidenz B</span>
           <span class="rank-dose">300–600mg täglich</span>
-        <a href="https://moleqlar.com/products/uthever-nmn?_pos=1&_psq=nmn&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" style="display:block;margin-top:.4rem;font-family:'Space Mono',monospace;font-size:8px;color:#2d7a26;text-decoration:none">→ Bei MoleQlar</a>
+        </div>
+        <div class="rank-shop">
+          <a href="https://moleqlar.com/products/uthever-nmn?_pos=1&_psq=nmn&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
         </div>
       </a>
 
@@ -258,7 +267,9 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
         <div class="rank-meta">
           <span class="rank-badge badge-b">Evidenz B</span>
           <span class="rank-dose">1–2mg täglich</span>
-        <a href="https://moleqlar.com/products/spermidin-pro-kapseln?_pos=1&_psq=Spermidine&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" style="display:block;margin-top:.4rem;font-family:'Space Mono',monospace;font-size:8px;color:#2d7a26;text-decoration:none">→ Bei MoleQlar</a>
+        </div>
+        <div class="rank-shop">
+          <a href="https://moleqlar.com/products/spermidin-pro-kapseln?_pos=1&_psq=Spermidine&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
         </div>
       </a>
 
@@ -271,13 +282,16 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
         <div class="rank-meta">
           <span class="rank-badge badge-c">Evidenz C</span>
           <span class="rank-dose">500mg 2–3x täglich</span>
-        <a href="https://moleqlar.com/products/berberin-kapseln?_pos=1&_psq=Berberin&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" style="display:block;margin-top:.4rem;font-family:'Space Mono',monospace;font-size:8px;color:#2d7a26;text-decoration:none">→ Bei MoleQlar</a>
+        </div>
+        <div class="rank-shop">
+          <a href="https://moleqlar.com/products/berberin-kapseln?_pos=1&_psq=Berberin&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
         </div>
       </a>
+
     </div>
   </div>
 
-  <!-- DEEP DIVES -->
+  <!-- DEEP DIVES  <!-- DEEP DIVES -->
   <div class="deepdive-section">
     <div class="section-label">// Empfohlene Lektüre</div>
     <h2 class="section-title">Die wichtigsten Supplement-Artikel</h2>
@@ -315,7 +329,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
 
     <table class="stack-table">
       <tr><th>Supplement</th><th>Warum</th><th>Dosis</th><th>~Kosten/Monat</th></tr>
-      <tr><td>Vitamin D3 + K2</td><td style="font-size:12px;font-weight:300">Mangel weit verbreitet in DE, starke Evidenz</td><td style="font-size:12px;font-weight:300">2000–4000 IE D3</td><td style="font-size:12px;color:#2d7a26;font-weight:600">~8€</td></tr>
+      <tr><td><a href="https://moleqlar.com/products/vitamin-d3-k2-tropfen?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" style="color:#2d7a26;text-decoration:none">Vitamin D3 + K2 →</a></td><td style="font-size:12px;font-weight:300">Mangel weit verbreitet in DE, starke Evidenz</td><td style="font-size:12px;font-weight:300">2000–4000 IE D3</td><td style="font-size:12px;color:#2d7a26;font-weight:600">~8€</td></tr>
       <tr><td>Omega-3</td><td style="font-size:12px;font-weight:300">Kardiovaskulär, anti-inflammatorisch, Gehirn</td><td style="font-size:12px;font-weight:300">2g EPA+DHA</td><td style="font-size:12px;color:#2d7a26;font-weight:600">~15€</td></tr>
       <tr><td>Kreatin Monohydrat</td><td style="font-size:12px;font-weight:300">Muskel, Kognition, Longevity ab 40</td><td style="font-size:12px;font-weight:300">3–5g täglich</td><td style="font-size:12px;color:#2d7a26;font-weight:600">~5€</td></tr>
       <tr><td>NMN (optional ab 45)</td><td style="font-size:12px;font-weight:300">NAD+-Boost, besonders Ü45 relevant</td><td style="font-size:12px;font-weight:300">300–600mg</td><td style="font-size:12px;color:#2d7a26;font-weight:600">~50€</td></tr>
