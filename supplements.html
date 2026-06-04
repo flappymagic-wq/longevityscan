@@ -74,18 +74,18 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
 /* EVIDENCE RANKING */
 .ranking-section{padding:2rem 0}
 .ranking-grid{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
-.rank-item{display:grid;grid-template-columns:2rem 1fr auto auto;gap:1rem;align-items:center;background:#fff;border:1px solid #e5e2d9;border-radius:8px;padding:.9rem 1.1rem;text-decoration:none;color:#111;transition:border-color .15s}
+.rank-item{display:grid;grid-template-columns:2rem 1fr auto;gap:1rem;align-items:center;background:#fff;border:1px solid #e5e2d9;border-radius:8px;padding:.9rem 1.1rem;color:#111;transition:border-color .15s}
 .rank-item:hover{border-color:#7fff6e}
 .rank-num{font-family:'Barlow Condensed',sans-serif;font-size:1.4rem;font-weight:700;color:#e5e2d9;line-height:1}
 .rank-body{}
 .rank-name{font-family:'Barlow Condensed',sans-serif;font-size:1.1rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;color:#111;margin-bottom:.2rem}
 .rank-desc{font-size:12px;color:#777;font-weight:300;line-height:1.5}
-.rank-meta{text-align:right}.rank-shop{display:flex;align-items:center}
+.rank-meta{text-align:right}
 .rank-badge{font-family:'Space Mono',monospace;font-size:8px;padding:3px 8px;border-radius:4px;display:block;margin-bottom:.3rem;white-space:nowrap}
 .badge-a{background:#e8ffe5;color:#2d7a26}
 .badge-b{background:#e5f0ff;color:#1a4fa8}
 .badge-c{background:#fff8e5;color:#d4900a}
-.rank-dose{font-family:'Space Mono',monospace;font-size:9px;color:#aaa;display:block;margin-bottom:.3rem}.rank-shop-btn{display:inline-block;background:#7fff6e;color:#111;font-family:'Space Mono',monospace;font-size:8px;font-weight:700;padding:3px 9px;border-radius:4px;text-decoration:none;white-space:nowrap}
+.rank-dose{font-family:'Space Mono',monospace;font-size:9px;color:#aaa;display:block;margin-bottom:.4rem}.rank-shop-btn{display:inline-block;background:#7fff6e;color:#111;font-family:'Space Mono',monospace;font-size:8px;font-weight:700;padding:3px 8px;border-radius:4px;text-decoration:none;white-space:nowrap}
 
 /* SUPPLEMENT DEEP DIVES */
 .deepdive-section{padding:2rem 0}
@@ -128,7 +128,7 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
 @media(max-width:600px){
   .nav{display:none}
   .deepdive-grid{grid-template-columns:1fr}
-  .rank-item{grid-template-columns:2rem 1fr}.rank-meta,.rank-shop{display:none}
+  .rank-item{grid-template-columns:2rem 1fr}.rank-meta{display:none}
   .start-here{grid-template-columns:1fr}
   .aff{flex-direction:column}
   .hero-stats{gap:1.5rem}
@@ -198,95 +198,89 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:16
 
     <div class="ranking-grid">
 
-      <a href="artikel-kreatin-longevity.html" class="rank-item">
+      <div class="rank-item">
         <div class="rank-num">01</div>
         <div class="rank-body">
           <div class="rank-name">Kreatin Monohydrat</div>
           <div class="rank-desc">Das meistuntersuchte Supplement überhaupt — über 1000 Humanstudien. Verbessert Muskelkraft, Kognition und zeigt neuroprotektive Effekte. Besonders relevant ab 40.</div>
+          <a href="artikel-kreatin-longevity.html" style="font-family:'Space Mono',monospace;font-size:8px;color:#777;text-decoration:none;margin-top:.3rem;display:inline-block">Artikel lesen →</a>
         </div>
         <div class="rank-meta">
           <span class="rank-badge badge-a">Evidenz A</span>
           <span class="rank-dose">3–5g täglich</span>
+          <a href="https://moleqlar.com/products/kreatin-monohydrat-pulver?_pos=1&_psq=kreatin&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn">Shop →</a>
         </div>
-        <div class="rank-shop">
-          <a href="https://moleqlar.com/products/kreatin-monohydrat-pulver?_pos=1&_psq=kreatin&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
-        </div>
-      </a>
+      </div>
 
-      <a href="artikel-supplement-guide.html" class="rank-item">
+      <div class="rank-item">
         <div class="rank-num">02</div>
         <div class="rank-body">
           <div class="rank-name">Omega-3 (EPA + DHA)</div>
           <div class="rank-desc">Einer der best-belegten Wirkstoffe überhaupt. Reduziert kardiovaskuläres Risiko, systemische Entzündung und unterstützt Gehirngesundheit. In Deutschland oft unterversorgt.</div>
+          <a href="artikel-supplement-guide.html" style="font-family:'Space Mono',monospace;font-size:8px;color:#777;text-decoration:none;margin-top:.3rem;display:inline-block">Artikel lesen →</a>
         </div>
         <div class="rank-meta">
           <span class="rank-badge badge-a">Evidenz A</span>
           <span class="rank-dose">2g EPA+DHA täglich</span>
+          <a href="https://moleqlar.com/products/omega-3-kapseln?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn">Shop →</a>
         </div>
-        <div class="rank-shop">
-          <a href="https://moleqlar.com/products/omega-3-kapseln?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
-        </div>
-      </a>
+      </div>
 
-      <a href="artikel-supplement-guide.html" class="rank-item">
+      <div class="rank-item">
         <div class="rank-num">03</div>
         <div class="rank-body">
           <div class="rank-name">Vitamin D3 + K2</div>
           <div class="rank-desc">Vitamin-D-Mangel betrifft in Deutschland bis zu 60% der Bevölkerung — besonders im Winter. D3 und K2 zusammen für Knochen, Immunsystem und kardiovaskuläre Gesundheit.</div>
+          <a href="artikel-supplement-guide.html" style="font-family:'Space Mono',monospace;font-size:8px;color:#777;text-decoration:none;margin-top:.3rem;display:inline-block">Artikel lesen →</a>
         </div>
         <div class="rank-meta">
           <span class="rank-badge badge-a">Evidenz A</span>
           <span class="rank-dose">2000–4000 IE D3 täglich</span>
+          <a href="https://moleqlar.com/products/vitamin-d3-k2-tropfen?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn">Shop →</a>
         </div>
-        <div class="rank-shop">
-          <a href="https://moleqlar.com/products/vitamin-d3-k2-tropfen?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
-        </div>
-      </a>
+      </div>
 
-      <a href="artikel-nmn-studie-2026.html" class="rank-item">
+      <div class="rank-item">
         <div class="rank-num">04</div>
         <div class="rank-body">
           <div class="rank-name">NMN (Nicotinamid-Mononukleotid)</div>
           <div class="rank-desc">NAD+-Vorläufer der direkt den zellulären Energiestoffwechsel unterstützt. Neue Humanstudie 2026: +40% NAD+ nach 60 Tagen bei Probanden über 45. Am stärksten für Ü45.</div>
+          <a href="artikel-nmn-studie-2026.html" style="font-family:'Space Mono',monospace;font-size:8px;color:#777;text-decoration:none;margin-top:.3rem;display:inline-block">Artikel lesen →</a>
         </div>
         <div class="rank-meta">
           <span class="rank-badge badge-b">Evidenz B</span>
           <span class="rank-dose">300–600mg täglich</span>
+          <a href="https://moleqlar.com/products/uthever-nmn?_pos=1&_psq=nmn&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn">Shop →</a>
         </div>
-        <div class="rank-shop">
-          <a href="https://moleqlar.com/products/uthever-nmn?_pos=1&_psq=nmn&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
-        </div>
-      </a>
+      </div>
 
-      <a href="artikel-moleqlar-one-test.html" class="rank-item">
+      <div class="rank-item">
         <div class="rank-num">05</div>
         <div class="rank-body">
           <div class="rank-name">Spermidine</div>
           <div class="rank-desc">Natürlich vorkommend in Weizenkeimen und fermentierten Lebensmitteln. Aktiviert Autophagie — das zelluläre Recyclingsystem. Vielversprechende Daten zur kognitiven Gesundheit.</div>
+          <a href="artikel-moleqlar-one-test.html" style="font-family:'Space Mono',monospace;font-size:8px;color:#777;text-decoration:none;margin-top:.3rem;display:inline-block">Artikel lesen →</a>
         </div>
         <div class="rank-meta">
           <span class="rank-badge badge-b">Evidenz B</span>
           <span class="rank-dose">1–2mg täglich</span>
+          <a href="https://moleqlar.com/products/spermidin-pro-kapseln?_pos=1&_psq=Spermidine&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn">Shop →</a>
         </div>
-        <div class="rank-shop">
-          <a href="https://moleqlar.com/products/spermidin-pro-kapseln?_pos=1&_psq=Spermidine&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
-        </div>
-      </a>
+      </div>
 
-      <a href="artikel-supplement-guide.html" class="rank-item">
+      <div class="rank-item">
         <div class="rank-num">06</div>
         <div class="rank-body">
           <div class="rank-name">Berberin</div>
           <div class="rank-desc">Pflanzlicher AMPK-Aktivator mit metforminähnlichem Wirkmechanismus. Interessant für metabolische Gesundheit und Blutzuckerregulation. Oft als "natürliches Metformin" bezeichnet.</div>
+          <a href="artikel-supplement-guide.html" style="font-family:'Space Mono',monospace;font-size:8px;color:#777;text-decoration:none;margin-top:.3rem;display:inline-block">Artikel lesen →</a>
         </div>
         <div class="rank-meta">
           <span class="rank-badge badge-c">Evidenz C</span>
           <span class="rank-dose">500mg 2–3x täglich</span>
+          <a href="https://moleqlar.com/products/berberin-kapseln?_pos=1&_psq=Berberin&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn">Shop →</a>
         </div>
-        <div class="rank-shop">
-          <a href="https://moleqlar.com/products/berberin-kapseln?_pos=1&_psq=Berberin&_ss=e&_v=1.0&sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="rank-shop-btn" onclick="event.stopPropagation()">Shop →</a>
-        </div>
-      </a>
+      </div>
 
     </div>
   </div>
