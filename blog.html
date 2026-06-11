@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237fff6e'/><text x='16' y='23' text-anchor='middle' font-size='18' font-family='sans-serif' font-weight='bold' fill='%23111'>L</text></svg>">
-<title>Longevity Artikel auf Deutsch — Studien & Guides | LongevityScan</title>
+<title>Longevity Artikel auf Deutsch — Studien &amp; Guides | LongevityScan</title>
 <meta name="description" content="Alle Longevity-Artikel: NMN, Zone 2, Intervallfasten, biologisches Alter, Supplements — evidenzbasiert erklärt auf Deutsch.">
 <link rel="canonical" href="https://longevityscan.de/blog.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,114 +12,152 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"></noscript>
 <style>
-
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.w{max-width:1160px;margin:0 auto;padding:0 2rem}
+html{overflow-x:hidden}
+body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.w{max-width:1160px;margin:0 auto;padding:0 1.5rem}
 .header{background:#111;position:sticky;top:0;z-index:100}
 .header .w{height:56px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:.05em;text-transform:uppercase}
-.logo span{background:#7fff6e;color:#111;padding:0 6px;margin:0 2px}
+.logo{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:700;color:#fff;text-decoration:none;letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.logo span{background:#7fff6e;color:#111;padding:0 5px;margin:0 2px}
 .nav{display:flex}
-.nav a{font-family:'Space Mono',monospace;font-size:10px;color:#555;padding:8px 12px;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border-bottom:2px solid transparent;transition:color .15s}
+.nav a{font-family:'Space Mono',monospace;font-size:11px;color:#999;padding:8px 12px;text-transform:uppercase;letter-spacing:.04em;text-decoration:none;border-bottom:2px solid transparent;transition:color .15s;white-space:nowrap}
 .nav a:hover{color:#fff}
 .nav a.act{color:#7fff6e;border-bottom-color:#7fff6e}
 
+/* BURGER */
+.burger{display:none;background:none;border:none;cursor:pointer;width:34px;height:34px;flex-direction:column;justify-content:center;gap:5px;padding:0}
+.burger span{display:block;height:2px;width:22px;background:#fff;transition:.2s}
+.menu-overlay{position:fixed;inset:0;background:#111;z-index:200;display:none;flex-direction:column;padding:1.5rem;overflow-y:auto}
+.menu-overlay.open{display:flex}
+.menu-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem}
+.menu-close{background:none;border:none;color:#fff;font-size:30px;cursor:pointer;line-height:1}
+.menu-sec{font-family:'Space Mono',monospace;font-size:10px;color:#7fff6e;text-transform:uppercase;letter-spacing:.12em;margin:1.25rem 0 .5rem}
+.menu-overlay a.menu-link{display:block;font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:700;color:#fff;text-transform:uppercase;text-decoration:none;padding:.45rem 0}
+.menu-overlay a.menu-link:hover{color:#7fff6e}
+.menu-cat{display:flex;justify-content:space-between;align-items:center;padding:.6rem 0;border-bottom:1px solid #262626;text-decoration:none;color:#ddd;font-size:14px}
+.menu-cat:last-child{border:none}
+.menu-cat .mc-count{font-family:'Space Mono',monospace;font-size:11px;color:#777}
+.menu-cat:hover{color:#7fff6e}
+
 /* BLOG HERO */
-.blog-hero{background:#111;padding:3rem 0 2.5rem}
+.blog-hero{background:#111;padding:2.5rem 0 2rem}
 .blog-hero .w{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .blog-hero-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.03em;line-height:1.05;margin-bottom:.5rem}
 .blog-hero-title span{color:#7fff6e}
-.blog-hero-sub{font-size:13px;color:#666;line-height:1.7;font-weight:300}
+.blog-hero-sub{font-size:13px;color:#888;line-height:1.7;font-weight:300}
 .blog-stats{display:flex;gap:2rem}
 .blog-stat-num{font-family:'Barlow Condensed',sans-serif;font-size:2rem;font-weight:700;color:#7fff6e;line-height:1}
-.blog-stat-lbl{font-family:'Space Mono',monospace;font-size:8px;color:#555;text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
+.blog-stat-lbl{font-family:'Space Mono',monospace;font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.06em;margin-top:3px}
 
 /* FILTER */
 .filter-wrap{background:#fff;border-bottom:1px solid #e5e2d9;position:sticky;top:56px;z-index:90}
-.filter-wrap .w{display:flex;gap:.5rem;padding-top:.75rem;padding-bottom:.75rem;overflow-x:auto;scrollbar-width:none}
-.filter-wrap .w::-webkit-scrollbar{display:none}
-.filter-btn{font-family:'Space Mono',monospace;font-size:9px;padding:5px 14px;border:1px solid #e5e2d9;background:#f2f0eb;color:#777;border-radius:20px;cursor:pointer;text-transform:uppercase;letter-spacing:.06em;transition:all .15s;white-space:nowrap;flex-shrink:0}
+.filter-wrap .w{display:flex;flex-wrap:wrap;gap:.5rem;padding-top:.75rem;padding-bottom:.75rem}
+.filter-btn{font-family:'Space Mono',monospace;font-size:11px;padding:5px 14px;border:1px solid #e5e2d9;background:#f2f0eb;color:#777;border-radius:20px;cursor:pointer;text-transform:uppercase;letter-spacing:.04em;transition:all .15s;white-space:nowrap}
 .filter-btn:hover{background:#111;color:#7fff6e;border-color:#111}
 .filter-btn.active{background:#111;color:#7fff6e;border-color:#111}
 
-/* MAIN LAYOUT */
+/* MAIN */
 .blog-main{padding:2rem 0}
 .blog-main .w{display:grid;grid-template-columns:1fr 300px;gap:2.5rem}
 
+/* COVERS */
+.cover-svg{display:block;width:100%;height:auto}
+.card-cover{width:100%;overflow:hidden;background:#0d120c;line-height:0}
+
 /* FEATURED */
 .featured-article{background:#111;border-radius:12px;overflow:hidden;margin-bottom:2rem;text-decoration:none;color:inherit;display:block;transition:opacity .15s}
-.featured-article:hover{opacity:.9}
+.featured-article:hover{opacity:.92}
+.feat-cover{width:100%;overflow:hidden;background:#0d120c;line-height:0;border-bottom:1px solid #1f1f1f}
 .feat-inner{padding:1.75rem}
-.feat-kicker{font-family:'Space Mono',monospace;font-size:9px;text-transform:uppercase;letter-spacing:.1em;color:#7fff6e;margin-bottom:.6rem}
+.feat-kicker{font-family:'Space Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#7fff6e;margin-bottom:.6rem}
 .feat-title{font-family:'Barlow Condensed',sans-serif;font-size:clamp(1.4rem,3vw,1.9rem);font-weight:700;text-transform:uppercase;letter-spacing:.02em;color:#fff;line-height:1.1;margin-bottom:.75rem}
-.feat-excerpt{font-size:13px;color:#888;line-height:1.7;font-weight:300;margin-bottom:1rem}
-.feat-meta{font-family:'Space Mono',monospace;font-size:9px;color:#555;display:flex;gap:1rem;flex-wrap:wrap}
-.feat-read{display:inline-block;margin-top:.75rem;font-family:'Space Mono',monospace;font-size:9px;color:#7fff6e;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid rgba(127,255,110,.3)}
+.feat-excerpt{font-size:13px;color:#999;line-height:1.7;font-weight:300;margin-bottom:1rem}
+.feat-meta{font-family:'Space Mono',monospace;font-size:11px;color:#777;display:flex;gap:1rem;flex-wrap:wrap}
+.feat-read{display:inline-block;margin-top:.75rem;font-family:'Space Mono',monospace;font-size:11px;color:#7fff6e;text-transform:uppercase;letter-spacing:.06em;border-bottom:1px solid rgba(127,255,110,.3)}
 
-/* ARTICLE GRID */
+/* GRID */
 .articles-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
 .article-card{background:#fff;border:1px solid #e5e2d9;border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;display:block;transition:border-color .15s,transform .15s}
 .article-card:hover{border-color:#bbb;transform:translateY(-2px)}
-.card-accent{height:3px}
-.acc-g{background:#7fff6e}.acc-o{background:#ff9500}.acc-b{background:#6ea8ff}.acc-p{background:#ff6b9d}.acc-r{background:#ff6b6b}
 .card-inner{padding:1rem}
-.card-pill{display:inline-block;font-family:'Space Mono',monospace;font-size:8px;padding:2px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.5rem}
-.pill-g{background:#e8ffe5;color:#2d7a26}.pill-r{background:#ffe5e5;color:#a80000}
-.pill-o{background:#fff3e5;color:#a85a00}
-.pill-b{background:#e5f0ff;color:#1a4fa8}
-.pill-p{background:#ffe5f0;color:#a8005a}
-.card-title{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;line-height:1.3;margin-bottom:.35rem;color:#111}
-.card-excerpt{font-size:11px;color:#777;line-height:1.6;font-weight:300}
-.card-meta{font-family:'Space Mono',monospace;font-size:9px;color:#bbb;margin-top:.5rem}
+.card-pill{display:inline-block;font-family:'Space Mono',monospace;font-size:11px;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.04em;margin-bottom:.5rem}
+.pill-g{background:#e8ffe5;color:#1d5418}.pill-r{background:#ffe5e5;color:#a80000}
+.pill-o{background:#fff3e5;color:#8a4a00}
+.pill-b{background:#e5f0ff;color:#143c80}
+.pill-p{background:#ffe5f0;color:#8a0049}
+.card-title{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;line-height:1.3;margin:.15rem 0 .35rem;color:#111}
+.card-excerpt{font-size:12px;color:#777;line-height:1.6;font-weight:300}
+.card-meta{font-family:'Space Mono',monospace;font-size:11px;color:#aaa;margin-top:.5rem}
 
 /* SIDEBAR */
 .sidebar{display:flex;flex-direction:column;gap:1.25rem}
 .widget{background:#fff;border:1px solid #e5e2d9;border-radius:8px;overflow:hidden}
-.wh{background:#111;padding:7px 12px;font-family:'Space Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.12em;color:#7fff6e}
+.wh{background:#111;padding:7px 12px;font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#7fff6e}
 .wb{padding:1rem}
 .cat-link{display:flex;align-items:center;justify-content:space-between;padding:.5rem 0;border-bottom:1px solid #e5e2d9;text-decoration:none;color:#111;font-size:13px;font-weight:500;transition:color .15s}
 .cat-link:last-child{border:none}
 .cat-link:hover{color:#2d7a26}
-.cat-count{font-family:'Space Mono',monospace;font-size:9px;color:#bbb}
+.cat-count{font-family:'Space Mono',monospace;font-size:11px;color:#aaa}
 .supp-item{display:flex;align-items:center;justify-content:space-between;padding:5px 0;border-bottom:1px solid #e5e2d9;font-size:12px}
 .supp-item:last-child{border:none}
 .sname{font-weight:500;color:#111}
-.stars{font-family:'Space Mono',monospace;font-size:10px}
-.sh{color:#2d7a26}.sm{color:#d4900a}.sl{color:#bbb}
+.stars{font-family:'Space Mono',monospace;font-size:11px}
+.sh{color:#2d7a26}.sm{color:#d4900a}.sl{color:#aaa}
+
+/* SPOTLIGHT */
+.spotlight{background:#111;border-radius:10px;overflow:hidden;width:100%}
+.sp-lbl{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#7fff6e;padding:.7rem 1rem .4rem}
+.sp-inner{display:flex;gap:1rem;padding:0 1rem 1rem;align-items:center}
+.sp-img{flex-shrink:0;width:84px;background:#fff;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.sp-img img{width:100%;height:auto;display:block}
+.sp-info{flex:1;min-width:0}
+.sp-name{font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:#fff;line-height:1.25;margin-bottom:.3rem}
+.sp-rating{font-family:'Space Mono',monospace;font-size:11px;color:#7fff6e;margin-bottom:.4rem}
+.sp-desc{font-size:12px;color:#999;line-height:1.5;font-weight:300;margin-bottom:.7rem}
+.sp-btn{display:inline-block;background:#7fff6e;color:#111;padding:.5rem .9rem;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;border-radius:6px;text-decoration:none}
+.spotlight-mob{margin:0 0 1rem}
+
 .aff{background:#111;border-radius:8px;padding:1.1rem;color:#fff}
-.aff-lbl{font-family:'Space Mono',monospace;font-size:8px;text-transform:uppercase;letter-spacing:.12em;color:#7fff6e;margin-bottom:.4rem}
+.aff-lbl{font-family:'Space Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#7fff6e;margin-bottom:.4rem}
 .aff-title{font-family:'DM Sans',sans-serif;font-size:15px;font-weight:700;margin-bottom:.4rem}
-.aff-body{font-size:11px;color:#888;line-height:1.55;font-weight:300;margin-bottom:.75rem}
+.aff-body{font-size:12px;color:#888;line-height:1.55;font-weight:300;margin-bottom:.75rem}
 .aff-btn{display:block;width:100%;background:#7fff6e;color:#111;border:none;padding:.65rem;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;cursor:pointer;border-radius:6px;text-align:center;text-decoration:none}
 
 .footer-bg{border-top:2px solid #111;padding:1.5rem 0;background:#f2f0eb;margin-top:2rem}
-.footer-bottom{display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:9px;color:#aaa}
+.footer-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;font-family:'Space Mono',monospace;font-size:11px;color:#aaa}
 .footer-bottom a{color:#aaa;text-decoration:none}
+.footer-bottom a:hover{color:#2d7a26}
 
-/* hidden articles for filter */
 .article-card.hidden{display:none}
 .featured-article.hidden{display:none}
+.spotlight-mob{display:none}
 
-@keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.article-card{animation:fadeUp .35s ease both}
-.article-card:nth-child(2){animation-delay:.05s}
-.article-card:nth-child(3){animation-delay:.1s}
-.article-card:nth-child(4){animation-delay:.15s}
-
-@media(max-width:960px){.blog-main .w{grid-template-columns:1fr}.blog-hero .w{grid-template-columns:1fr}}
-@media(max-width:768px){.articles-grid{grid-template-columns:1fr}.blog-stats{display:none}}
-@media(max-width:600px){.nav{display:none}}
+@media(max-width:959px){
+  .blog-main .w{grid-template-columns:1fr}
+  .blog-hero .w{grid-template-columns:1fr;gap:1.25rem}
+  .sidebar{display:none}
+  .spotlight-mob{display:block}
+  .nav a{display:none}
+  .burger{display:flex}
+}
+@media(max-width:639px){
+  .articles-grid{grid-template-columns:1fr}
+  .blog-stats{gap:1.25rem}
+}
 </style>
 <meta property="og:type" content="website">
-<meta property="og:title" content="Longevity Artikel auf Deutsch — Studien & Guides | LongevityScan">
+<meta property="og:title" content="Longevity Artikel auf Deutsch — Studien &amp; Guides | LongevityScan">
 <meta property="og:description" content="Alle Longevity-Artikel: NMN, Zone 2, Intervallfasten, biologisches Alter, Supplements — evidenzbasiert erklärt auf Deutsch.">
 <meta property="og:url" content="https://longevityscan.de/blog.html">
 <meta property="og:site_name" content="LongevityScan.de">
 <meta property="og:image" content="https://longevityscan.de/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Longevity Artikel auf Deutsch — Studien & Guides | LongevityScan">
+<meta name="twitter:title" content="Longevity Artikel auf Deutsch — Studien &amp; Guides | LongevityScan">
 <meta name="twitter:description" content="Alle Longevity-Artikel: NMN, Zone 2, Intervallfasten, biologisches Alter, Supplements — evidenzbasiert erklärt auf Deutsch.">
+<meta name="twitter:image" content="https://longevityscan.de/og-image.png">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -135,6 +173,99 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://longevityscan.de/artikel-nmn-studie-2026.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "url": "https://longevityscan.de/artikel-10-aelteste-maenner-longevity.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "url": "https://longevityscan.de/artikel-kollagen-studie-2026.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "url": "https://longevityscan.de/artikel-haarausfall-routine.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "url": "https://longevityscan.de/artikel-gen-uhr-biologisches-alter.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "url": "https://longevityscan.de/artikel-oura-ring-5-test.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 7,
+      "url": "https://longevityscan.de/artikel-semaglutid-deutschland-2026.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 8,
+      "url": "https://longevityscan.de/artikel-fitbit-air-vergleich.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 9,
+      "url": "https://longevityscan.de/artikel-kreatin-longevity.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 10,
+      "url": "https://longevityscan.de/artikel-schlaf-aging.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 11,
+      "url": "https://longevityscan.de/artikel-zone2-training.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 12,
+      "url": "https://longevityscan.de/artikel-oura-whoop-vergleich.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 13,
+      "url": "https://longevityscan.de/artikel-moleqlar-one-test.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://longevityscan.de/artikel-supplement-guide.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://longevityscan.de/artikel-intervallfasten-2026.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://longevityscan.de/artikel-biologisches-alter.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://longevityscan.de/artikel-bryan-johnson-blueprint.html"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -147,15 +278,33 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
       <a href="blog.html" class="act">Blog</a>
       <a href="https://moleqlar.com?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" style="color:#7fff6e">Shop →</a>
     </nav>
+    <button class="burger" aria-label="Menü öffnen" aria-expanded="false" onclick="openMenu()"><span></span><span></span><span></span></button>
   </div>
-
 </header>
 
-<!-- BLOG HERO -->
+<div class="menu-overlay" id="menuOverlay" role="dialog" aria-modal="true" aria-label="Navigation">
+  <div class="menu-top">
+    <a href="index.html" class="logo">LONGEVITY<span>SCAN</span>.DE</a>
+    <button class="menu-close" aria-label="Menü schließen" onclick="closeMenu()">×</button>
+  </div>
+  <a href="index.html" class="menu-link">Startseite</a>
+  <a href="supplements.html" class="menu-link">Supplements</a>
+  <a href="blog.html" class="menu-link">Blog</a>
+  <a href="https://moleqlar.com?sca_ref=11439245.Fio1O0WpwLUchmz" target="_blank" rel="noopener sponsored" class="menu-link" style="color:#7fff6e">Shop →</a>
+  <div class="menu-sec">Kategorien</div>
+  <a href="blog.html?cat=studien" class="menu-cat"><span>Studien</span><span class="mc-count">2</span></a>
+  <a href="blog.html?cat=supplements" class="menu-cat"><span>Supplements</span><span class="mc-count">5</span></a>
+  <a href="blog.html?cat=biohacking" class="menu-cat"><span>Biohacking</span><span class="mc-count">3</span></a>
+  <a href="blog.html?cat=schlaf" class="menu-cat"><span>Schlaf &amp; HRV</span><span class="mc-count">3</span></a>
+  <a href="blog.html?cat=ernaehrung" class="menu-cat"><span>Ernährung</span><span class="mc-count">1</span></a>
+  <a href="blog.html?cat=protokoll" class="menu-cat"><span>Protokoll</span><span class="mc-count">2</span></a>
+  <a href="blog.html?cat=epigenetik" class="menu-cat"><span>Epigenetik</span><span class="mc-count">1</span></a>
+</div>
+
 <div class="blog-hero">
   <div class="w">
     <div>
-      <h1 class="blog-hero-title">Blog &<br><span>Analysen</span></h1>
+      <h1 class="blog-hero-title">Blog &amp;<br><span>Analysen</span></h1>
       <p class="blog-hero-sub">Studien, Supplement-Tests, Protokolle und Biohacking-Guides — wöchentlich aktualisiert. Evidenzbasiert, transparent, kein Hype.</p>
     </div>
     <div class="blog-stats">
@@ -166,216 +315,107 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
   </div>
 </div>
 
-<!-- FILTER -->
 <div class="filter-wrap">
   <div class="w">
     <button class="filter-btn active" data-cat="alle">Alle</button>
-    <button class="filter-btn" data-cat="studien">🧬 Studien</button>
-    <button class="filter-btn" data-cat="supplements">🧪 Supplements</button>
-    <button class="filter-btn" data-cat="biohacking">⚡ Biohacking</button>
-    <button class="filter-btn" data-cat="ernaehrung">🍽 Ernährung</button>
-    <button class="filter-btn" data-cat="schlaf">😴 Schlaf & HRV</button>
-    <button class="filter-btn" data-cat="protokoll">📋 Protokoll</button>
-    <button class="filter-btn" data-cat="epigenetik">🔬 Epigenetik</button>
+    <button class="filter-btn" data-cat="studien">Studien</button>
+    <button class="filter-btn" data-cat="supplements">Supplements</button>
+    <button class="filter-btn" data-cat="biohacking">Biohacking</button>
+    <button class="filter-btn" data-cat="ernaehrung">Ernährung</button>
+    <button class="filter-btn" data-cat="schlaf">Schlaf &amp; HRV</button>
+    <button class="filter-btn" data-cat="protokoll">Protokoll</button>
+    <button class="filter-btn" data-cat="epigenetik">Epigenetik</button>
   </div>
 </div>
 
-<!-- MAIN -->
 <div class="blog-main">
   <div class="w">
     <div>
 
-      <!-- FEATURED -->
-      <a href="artikel-nmn-studie-2026.html" class="featured-article" data-cat="studien">
-        <div class="feat-inner">
-          <div class="feat-kicker">🧬 Studie · NMN · Harvard</div>
-          <div class="feat-title">NMN erhöht NAD+ um 40% — was die neue Harvard-Studie wirklich bedeutet</div>
-          <p class="feat-excerpt">Die bisher größte Humanstudie zu NMN wurde veröffentlicht. Die Ergebnisse sind beeindruckend — aber nicht für jeden relevant. Wir haben die Rohdaten analysiert.</p>
-          <div class="feat-meta">
-            <span>22. Mai 2026</span><span>6 Min. Lesezeit</span><span style="color:#7fff6e">Harvard · Aging Cell</span>
+      <div class="spotlight spotlight-mob">
+        <div class="sp-lbl">Produkt-Spotlight · Anzeige</div>
+        <div class="sp-inner">
+          <div class="sp-img"><img src="spotlight-vitamin-d3-k2.webp" width="360" height="568" alt="Sunday Natural Vitamin D3 + K2 MK7, 5000 IE, vegane Tropfen" loading="lazy"></div>
+          <div class="sp-info">
+            <div class="sp-name">Vitamin D3 + K2 MK7 · 5000 I.E.</div>
+            <div class="sp-rating">★★★ Stark · Evidenz für Knochen & Immunsystem</div>
+            <div class="sp-desc">Vegan, 1.200 Tropfen, MK7 all-trans. Solide Wahl für die Wintermonate in DE.</div>
+            <a href="https://amzn.to/49XmiMO" target="_blank" rel="noopener sponsored nofollow" class="sp-btn">Auf Amazon ansehen →</a>
           </div>
+        </div>
+      </div>
+
+      <a href="artikel-nmn-studie-2026.html" class="featured-article" data-cat="studien">
+        <div class="feat-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0d120c"><g stroke="#7fff6e" stroke-width="1.4" fill="#7fff6e"><circle cx="150" cy="75" r="7"/><circle cx="105" cy="48" r="5" opacity=".85"/><circle cx="108" cy="104" r="5" opacity=".7"/><circle cx="198" cy="55" r="5" opacity=".8"/><circle cx="195" cy="102" r="4" opacity=".6"/><circle cx="240" cy="78" r="4" opacity=".5"/><line x1="150" y1="75" x2="105" y2="48" opacity=".55"/><line x1="150" y1="75" x2="108" y2="104" opacity=".5"/><line x1="150" y1="75" x2="198" y2="55" opacity=".55"/><line x1="150" y1="75" x2="195" y2="102" opacity=".45"/><line x1="198" y1="55" x2="240" y2="78" opacity=".4"/><circle cx="62" cy="80" r="3" opacity=".4"/><line x1="105" y1="48" x2="62" y2="80" opacity=".3"/></g><text x="20" y="124" fill="#7fff6e" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">NMN · HARVARD</text></svg></div>
+        <div class="feat-inner">
+          <div class="feat-kicker">Studie · NMN · Harvard</div>
+          <h2 class="feat-title">NMN erhöht NAD+ um 40% — was die neue Harvard-Studie wirklich bedeutet</h2>
+          <p class="feat-excerpt">Die bisher größte Humanstudie zu NMN wurde veröffentlicht. Die Ergebnisse sind beeindruckend — aber nicht für jeden relevant. Wir haben die Rohdaten analysiert.</p>
+          <div class="feat-meta"><span>22. Mai 2026</span><span>6 Min. Lesezeit</span><span style="color:#7fff6e">Harvard · Aging Cell</span></div>
           <span class="feat-read">Artikel lesen →</span>
         </div>
       </a>
 
-      <!-- GRID -->
       <div class="articles-grid">
 
-        <a href="artikel-10-aelteste-maenner-longevity.html" class="article-card" data-cat="protokoll">
-          <div class="card-accent acc-b"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-b">📋 Protokoll · Neu</div>
-            <div class="card-title">Kein Fitnessstudio. Keine Supplements. 116 Jahre alt.</div>
-            <div class="card-excerpt">Was die 10 einzigen Männer über 112 wirklich gemeinsam hatten — 25 Punkte aus dem Hopf & Kettner Podcast.</div>
-            <div class="card-meta">8. Juni 2026 · 8 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-10-aelteste-maenner-longevity.html" class="article-card" data-cat="protokoll"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0a0e16"><g><rect x="92" y="36" width="16" height="16" rx="3" fill="none" stroke="#6ea8ff" stroke-width="1.6" opacity="0.90"/><polyline points="95,45 99,49 105,40" fill="none" stroke="#6ea8ff" stroke-width="1.8" opacity="0.90"/><line x1="120" y1="45" x2="210" y2="45" stroke="#6ea8ff" stroke-width="2" opacity="0.50"/><rect x="92" y="58" width="16" height="16" rx="3" fill="none" stroke="#6ea8ff" stroke-width="1.6" opacity="0.72"/><polyline points="95,67 99,71 105,62" fill="none" stroke="#6ea8ff" stroke-width="1.8" opacity="0.72"/><line x1="120" y1="67" x2="192" y2="67" stroke="#6ea8ff" stroke-width="2" opacity="0.40"/><rect x="92" y="80" width="16" height="16" rx="3" fill="none" stroke="#6ea8ff" stroke-width="1.6" opacity="0.54"/><polyline points="95,89 99,93 105,84" fill="none" stroke="#6ea8ff" stroke-width="1.8" opacity="0.54"/><line x1="120" y1="89" x2="174" y2="89" stroke="#6ea8ff" stroke-width="2" opacity="0.30"/><rect x="92" y="102" width="16" height="16" rx="3" fill="none" stroke="#6ea8ff" stroke-width="1.6" opacity="0.36"/><polyline points="95,111 99,115 105,106" fill="none" stroke="#6ea8ff" stroke-width="1.8" opacity="0.36"/><line x1="120" y1="111" x2="156" y2="111" stroke="#6ea8ff" stroke-width="2" opacity="0.20"/></g><text x="20" y="124" fill="#6ea8ff" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">LONGEVITY · PROTOKOLL</text></svg></div><div class="card-inner"><div class="card-pill pill-b">Protokoll · Neu</div><h3 class="card-title">Kein Fitnessstudio. Keine Supplements. 116 Jahre alt.</h3><div class="card-excerpt">Was die 10 einzigen Männer über 112 wirklich gemeinsam hatten — 25 Punkte aus dem Hopf & Kettner Podcast.</div><div class="card-meta">8. Juni 2026 · 8 Min.</div></div></a>
 
-        <a href="artikel-kollagen-studie-2026.html" class="article-card" data-cat="supplements">
-          <div class="card-accent acc-g"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-g">🧪 Supplement-Check · Neu</div>
-            <div class="card-title">Kollagen 2026: Was die größte Studie aller Zeiten wirklich zeigt</div>
-            <div class="card-excerpt">8.000 Teilnehmer, 113 RCTs — Haut und Gelenke profitieren, Sport-Performance nicht. Mit Dosierungstabelle.</div>
-            <div class="card-meta">8. Juni 2026 · 7 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-kollagen-studie-2026.html" class="article-card" data-cat="supplements"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0d120c"><g stroke="#7fff6e" stroke-width="1.4" fill="#7fff6e"><circle cx="150" cy="75" r="7"/><circle cx="105" cy="48" r="5" opacity=".85"/><circle cx="108" cy="104" r="5" opacity=".7"/><circle cx="198" cy="55" r="5" opacity=".8"/><circle cx="195" cy="102" r="4" opacity=".6"/><circle cx="240" cy="78" r="4" opacity=".5"/><line x1="150" y1="75" x2="105" y2="48" opacity=".55"/><line x1="150" y1="75" x2="108" y2="104" opacity=".5"/><line x1="150" y1="75" x2="198" y2="55" opacity=".55"/><line x1="150" y1="75" x2="195" y2="102" opacity=".45"/><line x1="198" y1="55" x2="240" y2="78" opacity=".4"/><circle cx="62" cy="80" r="3" opacity=".4"/><line x1="105" y1="48" x2="62" y2="80" opacity=".3"/></g><text x="20" y="124" fill="#7fff6e" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">KOLLAGEN · 113 RCT</text></svg></div><div class="card-inner"><div class="card-pill pill-g">Supplement-Check · Neu</div><h3 class="card-title">Kollagen 2026: Was die größte Studie aller Zeiten wirklich zeigt</h3><div class="card-excerpt">8.000 Teilnehmer, 113 RCTs — Haut und Gelenke profitieren, Sport-Performance nicht. Mit Dosierungstabelle.</div><div class="card-meta">8. Juni 2026 · 7 Min.</div></div></a>
 
-        <a href="artikel-haarausfall-routine.html" class="article-card" data-cat="biohacking">
-          <div class="card-accent acc-o"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-o">💆 Routine · 3 Produkte</div>
-            <div class="card-title">Haarausfall stoppen 2026 — Rosmarinöl, Microneedling & Rotlicht</div>
-            <div class="card-excerpt">Evidenzbasierte 3-Schritte-Routine mit Wochenplan — Rosmarinöl so gut wie Minoxidil, +51% Haarwachstum durch Rotlicht.</div>
-            <div class="card-meta">5. Juni 2026 · 9 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-haarausfall-routine.html" class="article-card" data-cat="biohacking"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#161009"><polyline points="15,80 70,80 88,80 100,45 116,112 132,62 150,80 230,80 250,80 268,55 285,80" fill="none" stroke="#ff9500" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="116" cy="112" r="3.5" fill="#ff9500"/><text x="20" y="124" fill="#ff9500" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">ROUTINE · 3 SCHRITTE</text></svg></div><div class="card-inner"><div class="card-pill pill-o">Routine · 3 Produkte</div><h3 class="card-title">Haarausfall stoppen 2026 — Rosmarinöl, Microneedling & Rotlicht</h3><div class="card-excerpt">Evidenzbasierte 3-Schritte-Routine mit Wochenplan — Rosmarinöl so gut wie Minoxidil, +51% Haarwachstum durch Rotlicht.</div><div class="card-meta">5. Juni 2026 · 9 Min.</div></div></a>
 
-        <a href="artikel-gen-uhr-biologisches-alter.html" class="article-card" data-cat="studien">
-          <div class="card-accent acc-g"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-g">🧬 Studie · Nature</div>
-            <div class="card-title">Harvard Gen-Uhr misst biologisches Alter und Sterberisiko</div>
-            <div class="card-excerpt">Neue transkriptomische Uhr aus Harvard präziser als GrimAge — was das für Longevity-Tracking bedeutet.</div>
-            <div class="card-meta">5. Juni 2026 · 6 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-gen-uhr-biologisches-alter.html" class="article-card" data-cat="studien"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0d120c"><path d="M60 43 Q71 86 82 96 Q93 103 104 107 Q115 106 126 103 Q137 95 148 86 Q159 75 170 64 Q181 54 192 47 Q203 43 214 44 Q225 48 236 55" fill="none" stroke="#7fff6e" stroke-width="2"/><path d="M60 107 Q71 64 82 54 Q93 47 104 43 Q115 44 126 47 Q137 55 148 64 Q159 75 170 86 Q181 96 192 103 Q203 107 214 106 Q225 102 236 95" fill="none" stroke="#7fff6e" stroke-width="2" opacity=".6"/><line x1="60" y1="75" x2="60" y2="75" stroke="#7fff6e" stroke-width="1.3" opacity="0.80"/><line x1="82" y1="96" x2="82" y2="54" stroke="#7fff6e" stroke-width="1.3" opacity="0.68"/><line x1="104" y1="107" x2="104" y2="43" stroke="#7fff6e" stroke-width="1.3" opacity="0.38"/><line x1="126" y1="103" x2="126" y2="47" stroke="#7fff6e" stroke-width="1.3" opacity="0.55"/><line x1="148" y1="86" x2="148" y2="64" stroke="#7fff6e" stroke-width="1.3" opacity="0.77"/><line x1="170" y1="64" x2="170" y2="86" stroke="#7fff6e" stroke-width="1.3" opacity="0.77"/><line x1="192" y1="47" x2="192" y2="103" stroke="#7fff6e" stroke-width="1.3" opacity="0.55"/><line x1="214" y1="44" x2="214" y2="106" stroke="#7fff6e" stroke-width="1.3" opacity="0.39"/><line x1="236" y1="55" x2="236" y2="95" stroke="#7fff6e" stroke-width="1.3" opacity="0.69"/><text x="20" y="124" fill="#7fff6e" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">GEN-UHR · NATURE</text></svg></div><div class="card-inner"><div class="card-pill pill-g">Studie · Nature</div><h3 class="card-title">Harvard Gen-Uhr misst biologisches Alter und Sterberisiko</h3><div class="card-excerpt">Neue transkriptomische Uhr aus Harvard präziser als GrimAge — was das für Longevity-Tracking bedeutet.</div><div class="card-meta">5. Juni 2026 · 6 Min.</div></div></a>
 
-        <a href="artikel-oura-ring-5-test.html" class="article-card" data-cat="schlaf">
-          <div class="card-accent acc-b"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-b">⭕ NEU · Oura Ring 5</div>
-            <div class="card-title">Oura Ring 5 Test Deutschland — lohnt er sich 2026?</div>
-            <div class="card-excerpt">Heute verfügbar: 40% kleiner, ab 429€, neue Features — was in DE ankommt und was nicht.</div>
-            <div class="card-meta">4. Juni 2026 · 8 Min.</div>
-          </div>
-        </a>
-<a href="artikel-semaglutid-deutschland-2026.html" class="article-card" data-cat="supplements">
-          <div class="card-accent acc-r"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-r">💉 GLP-1 · Supplement</div>
-            <div class="card-title">Semaglutid & Wegovy Pille Deutschland 2026</div>
-            <div class="card-excerpt">EMA empfiehlt Wegovy als Pille, neue 7,2mg-Dosis zugelassen — was das für Deutschland bedeutet.</div>
-            <div class="card-meta">3. Juni 2026 · 7 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-oura-ring-5-test.html" class="article-card" data-cat="schlaf"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0d120c"><g fill="none" stroke="#7fff6e" stroke-width="2.4"><circle cx="150" cy="75" r="34"/><circle cx="150" cy="75" r="22" opacity=".35" stroke-width="8"/></g><circle cx="150" cy="41" r="3" fill="#7fff6e"/><text x="20" y="124" fill="#7fff6e" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">OURA RING 5 · 2026</text></svg></div><div class="card-inner"><div class="card-pill pill-b">Neu · Oura Ring 5</div><h3 class="card-title">Oura Ring 5 Test Deutschland — lohnt er sich 2026?</h3><div class="card-excerpt">Heute verfügbar: 40% kleiner, ab 429€, neue Features — was in DE ankommt und was nicht.</div><div class="card-meta">4. Juni 2026 · 8 Min.</div></div></a>
 
-        <a href="artikel-fitbit-air-vergleich.html" class="article-card" data-cat="biohacking">
-          <div class="card-accent acc-b"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-b">⌚ Wearable-Test</div>
-            <div class="card-title">Google Fitbit Air Test 2026 — Vergleich mit Oura & Whoop</div>
-            <div class="card-excerpt">Googles neuer 99€ Tracker ohne Pflicht-Abo — schlägt er Oura Ring und Whoop 5.0?</div>
-            <div class="card-meta">2. Juni 2026 · 8 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-semaglutid-deutschland-2026.html" class="article-card" data-cat="supplements"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#160a0a"><g fill="none" stroke="#ff6b6b" stroke-width="2"><rect x="108" y="58" width="84" height="34" rx="17"/><line x1="150" y1="58" x2="150" y2="92" opacity=".5"/><rect x="108" y="58" width="42" height="34" rx="17" fill="#ff6b6b" opacity=".18" stroke="none"/></g><circle cx="80" cy="48" r="4" fill="#ff6b6b" opacity=".4"/><circle cx="220" cy="104" r="5" fill="#ff6b6b" opacity=".35"/><circle cx="210" cy="40" r="3" fill="#ff6b6b" opacity=".5"/><text x="20" y="124" fill="#ff6b6b" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">GLP-1 · WEGOVY</text></svg></div><div class="card-inner"><div class="card-pill pill-r">GLP-1 · Medikament</div><h3 class="card-title">Semaglutid & Wegovy Pille Deutschland 2026</h3><div class="card-excerpt">EMA empfiehlt Wegovy als Pille, neue 7,2mg-Dosis zugelassen — was das für Deutschland bedeutet.</div><div class="card-meta">3. Juni 2026 · 7 Min.</div></div></a>
 
-        <a href="artikel-kreatin-longevity.html" class="article-card" data-cat="supplements">
-          <div class="card-accent acc-g"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-g">🧪 Supplement-Check</div>
-            <div class="card-title">Kreatin: Das unterschätzte Longevity-Supplement</div>
-            <div class="card-excerpt">1000+ Humanstudien, 5€/Monat — warum Kreatin in jeden Longevity-Stack gehört.</div>
-            <div class="card-meta">2. Juni 2026 · 7 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-fitbit-air-vergleich.html" class="article-card" data-cat="biohacking"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0a0e16"><g fill="none" stroke="#6ea8ff" stroke-width="2.4"><circle cx="150" cy="75" r="34"/><circle cx="150" cy="75" r="22" opacity=".35" stroke-width="8"/></g><circle cx="150" cy="41" r="3" fill="#6ea8ff"/><text x="20" y="124" fill="#6ea8ff" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">FITBIT AIR · TEST</text></svg></div><div class="card-inner"><div class="card-pill pill-b">Wearable-Test</div><h3 class="card-title">Google Fitbit Air Test 2026 — Vergleich mit Oura & Whoop</h3><div class="card-excerpt">Googles neuer 99€ Tracker ohne Pflicht-Abo — schlägt er Oura Ring und Whoop 5.0?</div><div class="card-meta">2. Juni 2026 · 8 Min.</div></div></a>
 
-        <a href="artikel-schlaf-aging.html" class="article-card" data-cat="schlaf">
-          <div class="card-accent acc-b"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-b">😴 Schlaf & HRV</div>
-            <div class="card-title">Schlechter Schlaf altert dich schneller — was die Wissenschaft sagt</div>
-            <div class="card-excerpt">Epigenetische Studien machen es messbar: Schlafmangel beschleunigt biologisches Altern um bis zu 2 Jahre.</div>
-            <div class="card-meta">2. Juni 2026 · 7 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-kreatin-longevity.html" class="article-card" data-cat="supplements"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0d120c"><g stroke="#7fff6e" stroke-width="1.4" fill="#7fff6e"><circle cx="150" cy="75" r="7"/><circle cx="105" cy="48" r="5" opacity=".85"/><circle cx="108" cy="104" r="5" opacity=".7"/><circle cx="198" cy="55" r="5" opacity=".8"/><circle cx="195" cy="102" r="4" opacity=".6"/><circle cx="240" cy="78" r="4" opacity=".5"/><line x1="150" y1="75" x2="105" y2="48" opacity=".55"/><line x1="150" y1="75" x2="108" y2="104" opacity=".5"/><line x1="150" y1="75" x2="198" y2="55" opacity=".55"/><line x1="150" y1="75" x2="195" y2="102" opacity=".45"/><line x1="198" y1="55" x2="240" y2="78" opacity=".4"/><circle cx="62" cy="80" r="3" opacity=".4"/><line x1="105" y1="48" x2="62" y2="80" opacity=".3"/></g><text x="20" y="124" fill="#7fff6e" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">KREATIN · 1000+ STUDIEN</text></svg></div><div class="card-inner"><div class="card-pill pill-g">Supplement-Check</div><h3 class="card-title">Kreatin: Das unterschätzte Longevity-Supplement</h3><div class="card-excerpt">1000+ Humanstudien, 5€/Monat — warum Kreatin in jeden Longevity-Stack gehört.</div><div class="card-meta">2. Juni 2026 · 7 Min.</div></div></a>
 
-        <a href="artikel-zone2-training.html" class="article-card" data-cat="biohacking">
-          <div class="card-accent acc-o"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-o">⚡ Biohacking</div>
-            <div class="card-title">Zone 2 Training: Warum langsam laufen dich länger leben lässt</div>
-            <div class="card-excerpt">Peter Attias Protokoll — wie du es ohne teures Equipment umsetzt.</div>
-            <div class="card-meta">20. Mai 2026 · 6 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-schlaf-aging.html" class="article-card" data-cat="schlaf"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0a0e16"><g fill="none" stroke="#6ea8ff" stroke-width="2"><path d="M20 95 Q60 40 100 95 Q140 40 180 95 Q220 40 260 95" opacity=".9"/><path d="M20 95 Q60 65 100 95 Q140 65 180 95 Q220 65 260 95" opacity=".4"/><path d="M20 110 Q70 85 120 110 Q170 85 220 110 Q260 95 280 110" opacity=".25"/></g><text x="20" y="124" fill="#6ea8ff" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">SCHLAF · HRV</text></svg></div><div class="card-inner"><div class="card-pill pill-b">Schlaf & HRV</div><h3 class="card-title">Schlechter Schlaf altert dich schneller — was die Wissenschaft sagt</h3><div class="card-excerpt">Epigenetische Studien machen es messbar: Schlafmangel beschleunigt biologisches Altern um bis zu 2 Jahre.</div><div class="card-meta">2. Juni 2026 · 7 Min.</div></div></a>
 
-        <a href="artikel-oura-whoop-vergleich.html" class="article-card" data-cat="schlaf">
-          <div class="card-accent acc-b"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-b">😴 Schlaf & HRV</div>
-            <div class="card-title">Oura Ring vs. Whoop 5.0 — ehrlicher Vergleich nach 6 Monaten</div>
-            <div class="card-excerpt">Beide Wearables parallel getestet — überraschendes Ergebnis.</div>
-            <div class="card-meta">18. Mai 2026 · 7 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-zone2-training.html" class="article-card" data-cat="biohacking"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#161009"><polyline points="15,80 70,80 88,80 100,45 116,112 132,62 150,80 230,80 250,80 268,55 285,80" fill="none" stroke="#ff9500" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="116" cy="112" r="3.5" fill="#ff9500"/><text x="20" y="124" fill="#ff9500" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">ZONE 2 · ATTIA</text></svg></div><div class="card-inner"><div class="card-pill pill-o">Biohacking</div><h3 class="card-title">Zone 2 Training: Warum langsam laufen dich länger leben lässt</h3><div class="card-excerpt">Peter Attias Protokoll — wie du es ohne teures Equipment umsetzt.</div><div class="card-meta">20. Mai 2026 · 6 Min.</div></div></a>
 
-        <a href="artikel-moleqlar-one-test.html" class="article-card" data-cat="supplements">
-          <div class="card-accent acc-g"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-g">🧪 Supplement-Test</div>
-            <div class="card-title">MoleQlar ONE: Alle 13 Wirkstoffe auf dem Prüfstand</div>
-            <div class="card-excerpt">Was ist evidenzbasiert, was ist Marketing?</div>
-            <div class="card-meta">15. Mai 2026 · 8 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-oura-whoop-vergleich.html" class="article-card" data-cat="schlaf"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0a0e16"><g fill="none" stroke="#6ea8ff" stroke-width="2.4"><circle cx="150" cy="75" r="34"/><circle cx="150" cy="75" r="22" opacity=".35" stroke-width="8"/></g><circle cx="150" cy="41" r="3" fill="#6ea8ff"/><text x="20" y="124" fill="#6ea8ff" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">OURA vs WHOOP</text></svg></div><div class="card-inner"><div class="card-pill pill-b">Schlaf & HRV</div><h3 class="card-title">Oura Ring vs. Whoop 5.0 — ehrlicher Vergleich nach 6 Monaten</h3><div class="card-excerpt">Beide Wearables parallel getestet — überraschendes Ergebnis.</div><div class="card-meta">18. Mai 2026 · 7 Min.</div></div></a>
 
-        <a href="artikel-supplement-guide.html" class="article-card" data-cat="supplements">
-          <div class="card-accent acc-g"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-g">🧪 Supplement-Guide</div>
-            <div class="card-title">Longevity Supplements 2026 — Der vollständige Guide für Deutschland</div>
-            <div class="card-excerpt">NMN, Spermidine, Quercetin, Ca-AKG — alle wichtigen Supplements im Vergleich.</div>
-            <div class="card-meta">28. Mai 2026 · 12 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-moleqlar-one-test.html" class="article-card" data-cat="supplements"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0d120c"><g stroke="#7fff6e" stroke-width="1.4" fill="#7fff6e"><circle cx="150" cy="75" r="7"/><circle cx="105" cy="48" r="5" opacity=".85"/><circle cx="108" cy="104" r="5" opacity=".7"/><circle cx="198" cy="55" r="5" opacity=".8"/><circle cx="195" cy="102" r="4" opacity=".6"/><circle cx="240" cy="78" r="4" opacity=".5"/><line x1="150" y1="75" x2="105" y2="48" opacity=".55"/><line x1="150" y1="75" x2="108" y2="104" opacity=".5"/><line x1="150" y1="75" x2="198" y2="55" opacity=".55"/><line x1="150" y1="75" x2="195" y2="102" opacity=".45"/><line x1="198" y1="55" x2="240" y2="78" opacity=".4"/><circle cx="62" cy="80" r="3" opacity=".4"/><line x1="105" y1="48" x2="62" y2="80" opacity=".3"/></g><text x="20" y="124" fill="#7fff6e" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">MOLEQLAR ONE · 13 STOFFE</text></svg></div><div class="card-inner"><div class="card-pill pill-g">Supplement-Test</div><h3 class="card-title">MoleQlar ONE: Alle 13 Wirkstoffe auf dem Prüfstand</h3><div class="card-excerpt">Was ist evidenzbasiert, was ist Marketing?</div><div class="card-meta">15. Mai 2026 · 8 Min.</div></div></a>
 
-        <a href="artikel-intervallfasten-2026.html" class="article-card" data-cat="ernaehrung">
-          <div class="card-accent acc-p"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-p">🍽 Ernährung</div>
-            <div class="card-title">Intervallfasten 2026: Was die Wissenschaft jetzt wirklich sagt</div>
-            <div class="card-excerpt">Neue Meta-Analysen revidieren frühere Studien.</div>
-            <div class="card-meta">12. Mai 2026 · 5 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-supplement-guide.html" class="article-card" data-cat="supplements"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0d120c"><g stroke="#7fff6e" stroke-width="1.4" fill="#7fff6e"><circle cx="150" cy="75" r="7"/><circle cx="105" cy="48" r="5" opacity=".85"/><circle cx="108" cy="104" r="5" opacity=".7"/><circle cx="198" cy="55" r="5" opacity=".8"/><circle cx="195" cy="102" r="4" opacity=".6"/><circle cx="240" cy="78" r="4" opacity=".5"/><line x1="150" y1="75" x2="105" y2="48" opacity=".55"/><line x1="150" y1="75" x2="108" y2="104" opacity=".5"/><line x1="150" y1="75" x2="198" y2="55" opacity=".55"/><line x1="150" y1="75" x2="195" y2="102" opacity=".45"/><line x1="198" y1="55" x2="240" y2="78" opacity=".4"/><circle cx="62" cy="80" r="3" opacity=".4"/><line x1="105" y1="48" x2="62" y2="80" opacity=".3"/></g><text x="20" y="124" fill="#7fff6e" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">SUPPLEMENT-GUIDE</text></svg></div><div class="card-inner"><div class="card-pill pill-g">Supplement-Guide</div><h3 class="card-title">Longevity Supplements 2026 — Der vollständige Guide für Deutschland</h3><div class="card-excerpt">NMN, Spermidine, Quercetin, Ca-AKG — alle wichtigen Supplements im Vergleich.</div><div class="card-meta">28. Mai 2026 · 12 Min.</div></div></a>
 
-        <a href="artikel-biologisches-alter.html" class="article-card" data-cat="epigenetik">
-          <div class="card-accent acc-g"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-g">🔬 Epigenetik</div>
-            <div class="card-title">Biologisches Alter messen in Deutschland — welcher Test lohnt sich?</div>
-            <div class="card-excerpt">GrimAge, PhenoAge, DunedinPACE — ein ehrlicher Vergleich.</div>
-            <div class="card-meta">10. Mai 2026 · 7 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-intervallfasten-2026.html" class="article-card" data-cat="ernaehrung"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#160a10"><g fill="none" stroke="#ff6b9d" stroke-width="2"><circle cx="150" cy="75" r="40"/><circle cx="150" cy="75" r="27" opacity=".5"/><line x1="150" y1="35" x2="150" y2="115" opacity=".3"/><path d="M150 75 A40 40 0 0 1 178 113" stroke-width="6" opacity=".55"/></g><text x="20" y="124" fill="#ff6b9d" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">INTERVALLFASTEN</text></svg></div><div class="card-inner"><div class="card-pill pill-p">Ernährung</div><h3 class="card-title">Intervallfasten 2026: Was die Wissenschaft jetzt wirklich sagt</h3><div class="card-excerpt">Neue Meta-Analysen revidieren frühere Studien.</div><div class="card-meta">12. Mai 2026 · 5 Min.</div></div></a>
 
-        <a href="artikel-bryan-johnson-blueprint.html" class="article-card" data-cat="protokoll">
-          <div class="card-accent acc-b"></div>
-          <div class="card-inner">
-            <div class="card-pill pill-b">📋 Protokoll</div>
-            <div class="card-title">Bryan Johnson Blueprint — was für Deutsche unter 100€/Monat sinnvoll ist</div>
-            <div class="card-excerpt">2 Millionen pro Jahr — wir destillieren das Wesentliche.</div>
-            <div class="card-meta">8. Mai 2026 · 8 Min.</div>
-          </div>
-        </a>
+        <a href="artikel-biologisches-alter.html" class="article-card" data-cat="epigenetik"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0d120c"><path d="M60 43 Q71 86 82 96 Q93 103 104 107 Q115 106 126 103 Q137 95 148 86 Q159 75 170 64 Q181 54 192 47 Q203 43 214 44 Q225 48 236 55" fill="none" stroke="#7fff6e" stroke-width="2"/><path d="M60 107 Q71 64 82 54 Q93 47 104 43 Q115 44 126 47 Q137 55 148 64 Q159 75 170 86 Q181 96 192 103 Q203 107 214 106 Q225 102 236 95" fill="none" stroke="#7fff6e" stroke-width="2" opacity=".6"/><line x1="60" y1="75" x2="60" y2="75" stroke="#7fff6e" stroke-width="1.3" opacity="0.80"/><line x1="82" y1="96" x2="82" y2="54" stroke="#7fff6e" stroke-width="1.3" opacity="0.68"/><line x1="104" y1="107" x2="104" y2="43" stroke="#7fff6e" stroke-width="1.3" opacity="0.38"/><line x1="126" y1="103" x2="126" y2="47" stroke="#7fff6e" stroke-width="1.3" opacity="0.55"/><line x1="148" y1="86" x2="148" y2="64" stroke="#7fff6e" stroke-width="1.3" opacity="0.77"/><line x1="170" y1="64" x2="170" y2="86" stroke="#7fff6e" stroke-width="1.3" opacity="0.77"/><line x1="192" y1="47" x2="192" y2="103" stroke="#7fff6e" stroke-width="1.3" opacity="0.55"/><line x1="214" y1="44" x2="214" y2="106" stroke="#7fff6e" stroke-width="1.3" opacity="0.39"/><line x1="236" y1="55" x2="236" y2="95" stroke="#7fff6e" stroke-width="1.3" opacity="0.69"/><text x="20" y="124" fill="#7fff6e" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">EPIGENETIK · DE</text></svg></div><div class="card-inner"><div class="card-pill pill-g">Epigenetik</div><h3 class="card-title">Biologisches Alter messen in Deutschland — welcher Test lohnt sich?</h3><div class="card-excerpt">GrimAge, PhenoAge, DunedinPACE — ein ehrlicher Vergleich.</div><div class="card-meta">10. Mai 2026 · 7 Min.</div></div></a>
+
+        <a href="artikel-bryan-johnson-blueprint.html" class="article-card" data-cat="protokoll"><div class="card-cover"><svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" class="cover-svg" preserveAspectRatio="xMidYMid meet" role="img" aria-hidden="true" style="background:#0a0e16"><g><rect x="92" y="36" width="16" height="16" rx="3" fill="none" stroke="#6ea8ff" stroke-width="1.6" opacity="0.90"/><polyline points="95,45 99,49 105,40" fill="none" stroke="#6ea8ff" stroke-width="1.8" opacity="0.90"/><line x1="120" y1="45" x2="210" y2="45" stroke="#6ea8ff" stroke-width="2" opacity="0.50"/><rect x="92" y="58" width="16" height="16" rx="3" fill="none" stroke="#6ea8ff" stroke-width="1.6" opacity="0.72"/><polyline points="95,67 99,71 105,62" fill="none" stroke="#6ea8ff" stroke-width="1.8" opacity="0.72"/><line x1="120" y1="67" x2="192" y2="67" stroke="#6ea8ff" stroke-width="2" opacity="0.40"/><rect x="92" y="80" width="16" height="16" rx="3" fill="none" stroke="#6ea8ff" stroke-width="1.6" opacity="0.54"/><polyline points="95,89 99,93 105,84" fill="none" stroke="#6ea8ff" stroke-width="1.8" opacity="0.54"/><line x1="120" y1="89" x2="174" y2="89" stroke="#6ea8ff" stroke-width="2" opacity="0.30"/><rect x="92" y="102" width="16" height="16" rx="3" fill="none" stroke="#6ea8ff" stroke-width="1.6" opacity="0.36"/><polyline points="95,111 99,115 105,106" fill="none" stroke="#6ea8ff" stroke-width="1.8" opacity="0.36"/><line x1="120" y1="111" x2="156" y2="111" stroke="#6ea8ff" stroke-width="2" opacity="0.20"/></g><text x="20" y="124" fill="#6ea8ff" font-family="Space Mono,monospace" font-size="11" opacity=".85" letter-spacing="1">BLUEPRINT · PROTOKOLL</text></svg></div><div class="card-inner"><div class="card-pill pill-b">Protokoll</div><h3 class="card-title">Bryan Johnson Blueprint — was für Deutsche unter 100€/Monat sinnvoll ist</h3><div class="card-excerpt">2 Millionen pro Jahr — wir destillieren das Wesentliche.</div><div class="card-meta">8. Mai 2026 · 8 Min.</div></div></a>
 
       </div>
     </div>
 
-    <!-- SIDEBAR -->
     <aside class="sidebar">
-
+      <div class="spotlight spotlight-side">
+        <div class="sp-lbl">Produkt-Spotlight · Anzeige</div>
+        <div class="sp-inner">
+          <div class="sp-img"><img src="spotlight-vitamin-d3-k2.webp" width="360" height="568" alt="Sunday Natural Vitamin D3 + K2 MK7, 5000 IE, vegane Tropfen" loading="lazy"></div>
+          <div class="sp-info">
+            <div class="sp-name">Vitamin D3 + K2 MK7 · 5000 I.E.</div>
+            <div class="sp-rating">★★★ Stark · Evidenz für Knochen & Immunsystem</div>
+            <div class="sp-desc">Vegan, 1.200 Tropfen, MK7 all-trans. Solide Wahl für die Wintermonate in DE.</div>
+            <a href="https://amzn.to/49XmiMO" target="_blank" rel="noopener sponsored nofollow" class="sp-btn">Auf Amazon ansehen →</a>
+          </div>
+        </div>
+      </div>
       <div class="widget">
         <div class="wh">// Kategorien</div>
         <div class="wb">
-          <a href="#" class="cat-link" data-cat="studien" onclick="filterCat(event,'studien')"><span>🧬 Studien</span><span class="cat-count">2</span></a>
-          <a href="#" class="cat-link" data-cat="supplements" onclick="filterCat(event,'supplements')"><span>🧪 Supplements</span><span class="cat-count">5</span></a>
-          <a href="#" class="cat-link" data-cat="biohacking" onclick="filterCat(event,'biohacking')"><span>⚡ Biohacking</span><span class="cat-count">2</span></a>
-          <a href="#" class="cat-link" data-cat="ernaehrung" onclick="filterCat(event,'ernaehrung')"><span>🍽 Ernährung</span><span class="cat-count">1</span></a>
-          <a href="#" class="cat-link" data-cat="schlaf" onclick="filterCat(event,'schlaf')"><span>😴 Schlaf & HRV</span><span class="cat-count">3</span></a>
-          <a href="#" class="cat-link" data-cat="protokoll" onclick="filterCat(event,'protokoll')"><span>📋 Protokoll</span><span class="cat-count">2</span></a>
-          <a href="#" class="cat-link" data-cat="epigenetik" onclick="filterCat(event,'epigenetik')"><span>🔬 Epigenetik</span><span class="cat-count">1</span></a>
+          <a href="#" class="cat-link" data-cat="studien" onclick="filterCat(event,'studien')"><span>Studien</span><span class="cat-count">2</span></a>
+          <a href="#" class="cat-link" data-cat="supplements" onclick="filterCat(event,'supplements')"><span>Supplements</span><span class="cat-count">5</span></a>
+          <a href="#" class="cat-link" data-cat="biohacking" onclick="filterCat(event,'biohacking')"><span>Biohacking</span><span class="cat-count">3</span></a>
+          <a href="#" class="cat-link" data-cat="ernaehrung" onclick="filterCat(event,'ernaehrung')"><span>Ernährung</span><span class="cat-count">1</span></a>
+          <a href="#" class="cat-link" data-cat="schlaf" onclick="filterCat(event,'schlaf')"><span>Schlaf & HRV</span><span class="cat-count">3</span></a>
+          <a href="#" class="cat-link" data-cat="protokoll" onclick="filterCat(event,'protokoll')"><span>Protokoll</span><span class="cat-count">2</span></a>
+          <a href="#" class="cat-link" data-cat="epigenetik" onclick="filterCat(event,'epigenetik')"><span>Epigenetik</span><span class="cat-count">1</span></a>
         </div>
       </div>
 
@@ -411,71 +451,47 @@ body{font-family:'DM Sans',sans-serif;background:#f2f0eb;color:#111;font-size:15
 </div>
 
 <script>
-function filterCat(e, cat) {
+function openMenu(){var o=document.getElementById('menuOverlay');o.classList.add('open');document.body.style.overflow='hidden';document.querySelector('.burger').setAttribute('aria-expanded','true');}
+function closeMenu(){var o=document.getElementById('menuOverlay');o.classList.remove('open');document.body.style.overflow='';document.querySelector('.burger').setAttribute('aria-expanded','false');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
+
+function filterCat(e, cat){
   e.preventDefault();
-  document.querySelectorAll('.filter-btn').forEach(b => {
-    b.classList.toggle('active', b.dataset.cat === cat);
-  });
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cat === cat));
   applyFilter(cat);
 }
-
 document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
+  btn.addEventListener('click', function(){
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     this.classList.add('active');
     applyFilter(this.dataset.cat);
   });
 });
-
-// Auto-filter from URL param e.g. blog.html?cat=supplements
-(function() {
+(function(){
   const params = new URLSearchParams(window.location.search);
   const cat = params.get('cat');
-  if (cat) {
+  if(cat){
     const btn = document.querySelector('.filter-btn[data-cat="' + cat + '"]');
-    if (btn) {
+    if(btn){
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       applyFilter(cat);
-      btn.scrollIntoView({behavior:'smooth', block:'nearest'});
     }
-  } else {
-    // On initial load with no filter: set correct counts from actual DOM
-    applyFilter('alle');
-  }
+  } else { applyFilter('alle'); }
 })();
 
-function applyFilter(cat) {
+function applyFilter(cat){
   const featured = document.querySelector('.featured-article');
   const cards = document.querySelectorAll('.article-card');
-
-  if (cat === 'alle') {
-    featured.classList.remove('hidden');
+  if(cat === 'alle'){
+    if(featured) featured.classList.remove('hidden');
     cards.forEach(c => c.classList.remove('hidden'));
   } else {
-    featured.classList.toggle('hidden', featured.dataset.cat !== cat);
-    cards.forEach(c => {
-      c.classList.toggle('hidden', c.dataset.cat !== cat);
-    });
+    if(featured) featured.classList.toggle('hidden', featured.dataset.cat !== cat);
+    cards.forEach(c => c.classList.toggle('hidden', c.dataset.cat !== cat));
   }
-
-  // Update sidebar category counts dynamically
   document.querySelectorAll('.cat-link[data-cat]').forEach(link => {
-    const linkCat = link.dataset.cat;
-    if (cat === 'alle') {
-      // Restore original counts
-      const allItems = [...(featured ? [featured] : []), ...Array.from(cards)];
-      const count = allItems.filter(el => el.dataset.cat === linkCat).length;
-      const badge = link.querySelector('.cat-count');
-      if (badge) badge.textContent = count;
-      link.style.opacity = '1';
-    } else {
-      const allItems = [...(featured ? [featured] : []), ...Array.from(cards)];
-      const count = allItems.filter(el => el.dataset.cat === linkCat).length;
-      const badge = link.querySelector('.cat-count');
-      if (badge) badge.textContent = count;
-      link.style.opacity = (linkCat === cat) ? '1' : '0.4';
-    }
+    link.style.opacity = (cat === 'alle' || link.dataset.cat === cat) ? '1' : '0.4';
   });
 }
 </script>
